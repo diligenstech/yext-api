@@ -61,6 +61,51 @@ module Yext
     # A list of the conditions treated by the healthcare provider   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  >Cannot Include: >* HTML markup
     attr_accessor :conditions_treated
 
+    # Information or messaging related to COVID-19.
+    attr_accessor :covid_messaging
+
+    # An appointment URL for scheduling a COVID-19 test.
+    attr_accessor :covid_test_appointment_url
+
+    # Indicates whether an appointment is required for a COVID-19 test.
+    attr_accessor :covid_testing_appointment_required
+
+    # Indicates whether location is a drive-through site for COVID-19 tests.
+    attr_accessor :covid_testing_drive_through_site
+
+    # Indicates whether location offers free COVID-19 testing.
+    attr_accessor :covid_testing_is_free
+
+    # Indicates whether there are patient restrictions for COVID-19 testing.
+    attr_accessor :covid_testing_patient_restrictions
+
+    # Indicates whether a referral is required for COVID-19 testing.
+    attr_accessor :covid_testing_referral_required
+
+    # Information or instructions for the COVID-19 testing site.
+    attr_accessor :covid_testing_site_instructions
+
+    # Indicates whether an appointment is required for a COVID-19 vaccine.
+    attr_accessor :covid_vaccine_appointment_required
+
+    # Indicates whether location is a drive-through site for COVID-19 vaccines.
+    attr_accessor :covid_vaccine_drive_through_site
+
+    # An information URL for more information about COVID-19 vaccines.
+    attr_accessor :covid_vaccine_information_url
+
+    # Indicates whether there are patient restrictions for a COVID-19 vaccine.
+    attr_accessor :covid_vaccine_patient_restrictions
+
+    # Indicates whether a referral is required for a COVID-19 vaccine.
+    attr_accessor :covid_vaccine_referral_required
+
+    # Information or instructions for the COVID-19 vaccination site.
+    attr_accessor :covid_vaccine_site_instructions
+
+    # Indicates which COVID-19 vaccines the location offers.
+    attr_accessor :covid_vaccines_offered
+
     # Additional keywords you would like us to use when tracking your search performance   Array must be ordered.  Array may have a maximum of 5 elements. 
     attr_accessor :custom_keywords
 
@@ -105,6 +150,9 @@ module Yext
 
     # A list of questions that are frequently asked about this entity   Array must be ordered.  Array may have a maximum of 100 elements. 
     attr_accessor :frequently_asked_questions
+
+    # Indicates whether the staff is vaccinated against COVID-19.
+    attr_accessor :fully_vaccinated_staff
 
     # Provides additional information on where the entity can be found (e.g., `Times Square`, `Global Center Mall`)
     attr_accessor :geomodifier
@@ -302,6 +350,21 @@ module Yext
         :'category_ids' => :'categoryIds',
         :'closed' => :'closed',
         :'conditions_treated' => :'conditionsTreated',
+        :'covid_messaging' => :'covidMessaging',
+        :'covid_test_appointment_url' => :'covidTestAppointmentUrl',
+        :'covid_testing_appointment_required' => :'covidTestingAppointmentRequired',
+        :'covid_testing_drive_through_site' => :'covidTestingDriveThroughSite',
+        :'covid_testing_is_free' => :'covidTestingIsFree',
+        :'covid_testing_patient_restrictions' => :'covidTestingPatientRestrictions',
+        :'covid_testing_referral_required' => :'covidTestingReferralRequired',
+        :'covid_testing_site_instructions' => :'covidTestingSiteInstructions',
+        :'covid_vaccine_appointment_required' => :'covidVaccineAppointmentRequired',
+        :'covid_vaccine_drive_through_site' => :'covidVaccineDriveThroughSite',
+        :'covid_vaccine_information_url' => :'covidVaccineInformationUrl',
+        :'covid_vaccine_patient_restrictions' => :'covidVaccinePatientRestrictions',
+        :'covid_vaccine_referral_required' => :'covidVaccineReferralRequired',
+        :'covid_vaccine_site_instructions' => :'covidVaccineSiteInstructions',
+        :'covid_vaccines_offered' => :'covidVaccinesOffered',
         :'custom_keywords' => :'customKeywords',
         :'description' => :'description',
         :'display_coordinate' => :'displayCoordinate',
@@ -319,6 +382,7 @@ module Yext
         :'featured_message' => :'featuredMessage',
         :'first_party_review_page' => :'firstPartyReviewPage',
         :'frequently_asked_questions' => :'frequentlyAskedQuestions',
+        :'fully_vaccinated_staff' => :'fullyVaccinatedStaff',
         :'geomodifier' => :'geomodifier',
         :'google_attributes' => :'googleAttributes',
         :'google_cover_photo' => :'googleCoverPhoto',
@@ -404,6 +468,21 @@ module Yext
         :'category_ids' => :'Array<String>',
         :'closed' => :'Boolean',
         :'conditions_treated' => :'Array<String>',
+        :'covid_messaging' => :'String',
+        :'covid_test_appointment_url' => :'String',
+        :'covid_testing_appointment_required' => :'Boolean',
+        :'covid_testing_drive_through_site' => :'Boolean',
+        :'covid_testing_is_free' => :'Boolean',
+        :'covid_testing_patient_restrictions' => :'Boolean',
+        :'covid_testing_referral_required' => :'Boolean',
+        :'covid_testing_site_instructions' => :'String',
+        :'covid_vaccine_appointment_required' => :'Boolean',
+        :'covid_vaccine_drive_through_site' => :'Boolean',
+        :'covid_vaccine_information_url' => :'String',
+        :'covid_vaccine_patient_restrictions' => :'Boolean',
+        :'covid_vaccine_referral_required' => :'Boolean',
+        :'covid_vaccine_site_instructions' => :'String',
+        :'covid_vaccines_offered' => :'Array<String>',
         :'custom_keywords' => :'Array<String>',
         :'description' => :'String',
         :'display_coordinate' => :'AtmWriteAllOfDisplayCoordinate',
@@ -421,6 +500,7 @@ module Yext
         :'featured_message' => :'AtmWriteAllOfFeaturedMessage',
         :'first_party_review_page' => :'String',
         :'frequently_asked_questions' => :'Array<AtmWriteAllOfFrequentlyAskedQuestions>',
+        :'fully_vaccinated_staff' => :'Boolean',
         :'geomodifier' => :'String',
         :'google_attributes' => :'Object',
         :'google_cover_photo' => :'AtmWriteAllOfGoogleCoverPhoto',
@@ -582,6 +662,68 @@ module Yext
         end
       end
 
+      if attributes.key?(:'covid_messaging')
+        self.covid_messaging = attributes[:'covid_messaging']
+      end
+
+      if attributes.key?(:'covid_test_appointment_url')
+        self.covid_test_appointment_url = attributes[:'covid_test_appointment_url']
+      end
+
+      if attributes.key?(:'covid_testing_appointment_required')
+        self.covid_testing_appointment_required = attributes[:'covid_testing_appointment_required']
+      end
+
+      if attributes.key?(:'covid_testing_drive_through_site')
+        self.covid_testing_drive_through_site = attributes[:'covid_testing_drive_through_site']
+      end
+
+      if attributes.key?(:'covid_testing_is_free')
+        self.covid_testing_is_free = attributes[:'covid_testing_is_free']
+      end
+
+      if attributes.key?(:'covid_testing_patient_restrictions')
+        self.covid_testing_patient_restrictions = attributes[:'covid_testing_patient_restrictions']
+      end
+
+      if attributes.key?(:'covid_testing_referral_required')
+        self.covid_testing_referral_required = attributes[:'covid_testing_referral_required']
+      end
+
+      if attributes.key?(:'covid_testing_site_instructions')
+        self.covid_testing_site_instructions = attributes[:'covid_testing_site_instructions']
+      end
+
+      if attributes.key?(:'covid_vaccine_appointment_required')
+        self.covid_vaccine_appointment_required = attributes[:'covid_vaccine_appointment_required']
+      end
+
+      if attributes.key?(:'covid_vaccine_drive_through_site')
+        self.covid_vaccine_drive_through_site = attributes[:'covid_vaccine_drive_through_site']
+      end
+
+      if attributes.key?(:'covid_vaccine_information_url')
+        self.covid_vaccine_information_url = attributes[:'covid_vaccine_information_url']
+      end
+
+      if attributes.key?(:'covid_vaccine_patient_restrictions')
+        self.covid_vaccine_patient_restrictions = attributes[:'covid_vaccine_patient_restrictions']
+      end
+
+      if attributes.key?(:'covid_vaccine_referral_required')
+        self.covid_vaccine_referral_required = attributes[:'covid_vaccine_referral_required']
+      end
+
+      if attributes.key?(:'covid_vaccine_site_instructions')
+        self.covid_vaccine_site_instructions = attributes[:'covid_vaccine_site_instructions']
+      end
+
+      if attributes.key?(:'covid_vaccines_offered')
+        if (value = attributes[:'covid_vaccines_offered']).is_a?(Array)
+          self.covid_vaccines_offered = value
+        end
+      end
+
       if attributes.key?(:'custom_keywords')
         if (value = attributes[:'custom_keywords']).is_a?(Array)
           self.custom_keywords = value
@@ -654,6 +796,10 @@ module Yext
         if (value = attributes[:'frequently_asked_questions']).is_a?(Array)
           self.frequently_asked_questions = value
         end
+      end
+
+      if attributes.key?(:'fully_vaccinated_staff')
+        self.fully_vaccinated_staff = attributes[:'fully_vaccinated_staff']
       end
 
       if attributes.key?(:'geomodifier')
@@ -935,6 +1081,38 @@ module Yext
         invalid_properties.push('invalid value for "alternate_phone", the character length must be great than or equal to 0.')
       end
 
+      if !@covid_messaging.nil? && @covid_messaging.to_s.length > 15000
+        invalid_properties.push('invalid value for "covid_messaging", the character length must be smaller than or equal to 15000.')
+      end
+
+      if !@covid_messaging.nil? && @covid_messaging.to_s.length < 0
+        invalid_properties.push('invalid value for "covid_messaging", the character length must be great than or equal to 0.')
+      end
+
+      if !@covid_test_appointment_url.nil? && @covid_test_appointment_url.to_s.length < 0
+        invalid_properties.push('invalid value for "covid_test_appointment_url", the character length must be great than or equal to 0.')
+      end
+
+      if !@covid_testing_site_instructions.nil? && @covid_testing_site_instructions.to_s.length > 15000
+        invalid_properties.push('invalid value for "covid_testing_site_instructions", the character length must be smaller than or equal to 15000.')
+      end
+
+      if !@covid_testing_site_instructions.nil? && @covid_testing_site_instructions.to_s.length < 0
+        invalid_properties.push('invalid value for "covid_testing_site_instructions", the character length must be great than or equal to 0.')
+      end
+
+      if !@covid_vaccine_information_url.nil? && @covid_vaccine_information_url.to_s.length < 0
+        invalid_properties.push('invalid value for "covid_vaccine_information_url", the character length must be great than or equal to 0.')
+      end
+
+      if !@covid_vaccine_site_instructions.nil? && @covid_vaccine_site_instructions.to_s.length > 15000
+        invalid_properties.push('invalid value for "covid_vaccine_site_instructions", the character length must be smaller than or equal to 15000.')
+      end
+
+      if !@covid_vaccine_site_instructions.nil? && @covid_vaccine_site_instructions.to_s.length < 0
+        invalid_properties.push('invalid value for "covid_vaccine_site_instructions", the character length must be great than or equal to 0.')
+      end
+
       if !@description.nil? && @description.to_s.length > 15000
         invalid_properties.push('invalid value for "description", the character length must be smaller than or equal to 15000.')
       end
@@ -1078,6 +1256,14 @@ module Yext
       return false if !@additional_hours_text.nil? && @additional_hours_text.to_s.length > 255
       return false if !@additional_hours_text.nil? && @additional_hours_text.to_s.length < 0
       return false if !@alternate_phone.nil? && @alternate_phone.to_s.length < 0
+      return false if !@covid_messaging.nil? && @covid_messaging.to_s.length > 15000
+      return false if !@covid_messaging.nil? && @covid_messaging.to_s.length < 0
+      return false if !@covid_test_appointment_url.nil? && @covid_test_appointment_url.to_s.length < 0
+      return false if !@covid_testing_site_instructions.nil? && @covid_testing_site_instructions.to_s.length > 15000
+      return false if !@covid_testing_site_instructions.nil? && @covid_testing_site_instructions.to_s.length < 0
+      return false if !@covid_vaccine_information_url.nil? && @covid_vaccine_information_url.to_s.length < 0
+      return false if !@covid_vaccine_site_instructions.nil? && @covid_vaccine_site_instructions.to_s.length > 15000
+      return false if !@covid_vaccine_site_instructions.nil? && @covid_vaccine_site_instructions.to_s.length < 0
       return false if !@description.nil? && @description.to_s.length > 15000
       return false if !@description.nil? && @description.to_s.length < 10
       return false if !@facebook_descriptor.nil? && @facebook_descriptor.to_s.length > 75
@@ -1192,6 +1378,68 @@ module Yext
     # @param [Object] conditions_treated Value to be assigned
     def conditions_treated=(conditions_treated)
       @conditions_treated = conditions_treated
+    end
+
+    # Custom attribute writer method with validation
+    # @param [Object] covid_messaging Value to be assigned
+    def covid_messaging=(covid_messaging)
+      if !covid_messaging.nil? && covid_messaging.to_s.length > 15000
+        fail ArgumentError, 'invalid value for "covid_messaging", the character length must be smaller than or equal to 15000.'
+      end
+
+      if !covid_messaging.nil? && covid_messaging.to_s.length < 0
+        fail ArgumentError, 'invalid value for "covid_messaging", the character length must be great than or equal to 0.'
+      end
+
+      @covid_messaging = covid_messaging
+    end
+
+    # Custom attribute writer method with validation
+    # @param [Object] covid_test_appointment_url Value to be assigned
+    def covid_test_appointment_url=(covid_test_appointment_url)
+      if !covid_test_appointment_url.nil? && covid_test_appointment_url.to_s.length < 0
+        fail ArgumentError, 'invalid value for "covid_test_appointment_url", the character length must be great than or equal to 0.'
+      end
+
+      @covid_test_appointment_url = covid_test_appointment_url
+    end
+
+    # Custom attribute writer method with validation
+    # @param [Object] covid_testing_site_instructions Value to be assigned
+    def covid_testing_site_instructions=(covid_testing_site_instructions)
+      if !covid_testing_site_instructions.nil? && covid_testing_site_instructions.to_s.length > 15000
+        fail ArgumentError, 'invalid value for "covid_testing_site_instructions", the character length must be smaller than or equal to 15000.'
+      end
+
+      if !covid_testing_site_instructions.nil? && covid_testing_site_instructions.to_s.length < 0
+        fail ArgumentError, 'invalid value for "covid_testing_site_instructions", the character length must be great than or equal to 0.'
+      end
+
+      @covid_testing_site_instructions = covid_testing_site_instructions
+    end
+
+    # Custom attribute writer method with validation
+    # @param [Object] covid_vaccine_information_url Value to be assigned
+    def covid_vaccine_information_url=(covid_vaccine_information_url)
+      if !covid_vaccine_information_url.nil? && covid_vaccine_information_url.to_s.length < 0
+        fail ArgumentError, 'invalid value for "covid_vaccine_information_url", the character length must be great than or equal to 0.'
+      end
+
+      @covid_vaccine_information_url = covid_vaccine_information_url
+    end
+
+    # Custom attribute writer method with validation
+    # @param [Object] covid_vaccine_site_instructions Value to be assigned
+    def covid_vaccine_site_instructions=(covid_vaccine_site_instructions)
+      if !covid_vaccine_site_instructions.nil? && covid_vaccine_site_instructions.to_s.length > 15000
+        fail ArgumentError, 'invalid value for "covid_vaccine_site_instructions", the character length must be smaller than or equal to 15000.'
+      end
+
+      if !covid_vaccine_site_instructions.nil? && covid_vaccine_site_instructions.to_s.length < 0
+        fail ArgumentError, 'invalid value for "covid_vaccine_site_instructions", the character length must be great than or equal to 0.'
+      end
+
+      @covid_vaccine_site_instructions = covid_vaccine_site_instructions
     end
 
     # Custom attribute writer method with validation
@@ -1612,6 +1860,21 @@ module Yext
           category_ids == o.category_ids &&
           closed == o.closed &&
           conditions_treated == o.conditions_treated &&
+          covid_messaging == o.covid_messaging &&
+          covid_test_appointment_url == o.covid_test_appointment_url &&
+          covid_testing_appointment_required == o.covid_testing_appointment_required &&
+          covid_testing_drive_through_site == o.covid_testing_drive_through_site &&
+          covid_testing_is_free == o.covid_testing_is_free &&
+          covid_testing_patient_restrictions == o.covid_testing_patient_restrictions &&
+          covid_testing_referral_required == o.covid_testing_referral_required &&
+          covid_testing_site_instructions == o.covid_testing_site_instructions &&
+          covid_vaccine_appointment_required == o.covid_vaccine_appointment_required &&
+          covid_vaccine_drive_through_site == o.covid_vaccine_drive_through_site &&
+          covid_vaccine_information_url == o.covid_vaccine_information_url &&
+          covid_vaccine_patient_restrictions == o.covid_vaccine_patient_restrictions &&
+          covid_vaccine_referral_required == o.covid_vaccine_referral_required &&
+          covid_vaccine_site_instructions == o.covid_vaccine_site_instructions &&
+          covid_vaccines_offered == o.covid_vaccines_offered &&
           custom_keywords == o.custom_keywords &&
           description == o.description &&
           display_coordinate == o.display_coordinate &&
@@ -1629,6 +1892,7 @@ module Yext
           featured_message == o.featured_message &&
           first_party_review_page == o.first_party_review_page &&
           frequently_asked_questions == o.frequently_asked_questions &&
+          fully_vaccinated_staff == o.fully_vaccinated_staff &&
           geomodifier == o.geomodifier &&
           google_attributes == o.google_attributes &&
           google_cover_photo == o.google_cover_photo &&
@@ -1697,7 +1961,7 @@ module Yext
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [meta, name, address, accepting_new_patients, access_hours, additional_hours_text, address_hidden, alternate_names, alternate_phone, alternate_websites, associations, bios, brands, calendars, category_ids, closed, conditions_treated, custom_keywords, description, display_coordinate, dropoff_coordinate, emails, facebook_call_to_action, facebook_cover_photo, facebook_descriptor, facebook_name, facebook_override_city, facebook_page_url, facebook_profile_photo, facebook_vanity_url, fax, featured_message, first_party_review_page, frequently_asked_questions, geomodifier, google_attributes, google_cover_photo, google_my_business_labels, google_place_id, google_profile_photo, google_website_override, holiday_hours_conversation_enabled, hours, impressum, instagram_handle, insurance_accepted, iso_region_code, keywords, labels, landing_page_url, languages, local_phone, location_type, logo, main_phone, menu_url, mobile_phone, npi, nudge_enabled, online_service_hours, order_url, payment_options, photo_gallery, pickup_coordinate, pickup_hours, price_range, primary_conversation_contact, product_lists, questions_and_answers, rank_tracking_competitors, rank_tracking_enabled, rank_tracking_frequency, rank_tracking_query_templates, rank_tracking_sites, reservation_url, review_generation_url, review_response_conversation_enabled, routable_coordinate, service_area, service_area_places, services, timezone, toll_free_phone, tty_phone, twitter_handle, uber_link, uber_trip_branding, videos, walkable_coordinate, website_url, year_established].hash
+      [meta, name, address, accepting_new_patients, access_hours, additional_hours_text, address_hidden, alternate_names, alternate_phone, alternate_websites, associations, bios, brands, calendars, category_ids, closed, conditions_treated, covid_messaging, covid_test_appointment_url, covid_testing_appointment_required, covid_testing_drive_through_site, covid_testing_is_free, covid_testing_patient_restrictions, covid_testing_referral_required, covid_testing_site_instructions, covid_vaccine_appointment_required, covid_vaccine_drive_through_site, covid_vaccine_information_url, covid_vaccine_patient_restrictions, covid_vaccine_referral_required, covid_vaccine_site_instructions, covid_vaccines_offered, custom_keywords, description, display_coordinate, dropoff_coordinate, emails, facebook_call_to_action, facebook_cover_photo, facebook_descriptor, facebook_name, facebook_override_city, facebook_page_url, facebook_profile_photo, facebook_vanity_url, fax, featured_message, first_party_review_page, frequently_asked_questions, fully_vaccinated_staff, geomodifier, google_attributes, google_cover_photo, google_my_business_labels, google_place_id, google_profile_photo, google_website_override, holiday_hours_conversation_enabled, hours, impressum, instagram_handle, insurance_accepted, iso_region_code, keywords, labels, landing_page_url, languages, local_phone, location_type, logo, main_phone, menu_url, mobile_phone, npi, nudge_enabled, online_service_hours, order_url, payment_options, photo_gallery, pickup_coordinate, pickup_hours, price_range, primary_conversation_contact, product_lists, questions_and_answers, rank_tracking_competitors, rank_tracking_enabled, rank_tracking_frequency, rank_tracking_query_templates, rank_tracking_sites, reservation_url, review_generation_url, review_response_conversation_enabled, routable_coordinate, service_area, service_area_places, services, timezone, toll_free_phone, tty_phone, twitter_handle, uber_link, uber_trip_branding, videos, walkable_coordinate, website_url, year_established].hash
     end
 
     # Builds the object from hash

@@ -18,7 +18,7 @@ module Yext
   class InlineResponse200ResponseTakeoutHours
     attr_accessor :friday
 
-    #  **NOTE:** The list of Holiday Hours that you send us must be comprehensive. For example, if you send us a list of Holiday Hours that does not include Holiday Hours that you sent in your last update, Yext considers the missing Holiday Hours to be deleted, and we remove them.    Array must be ordered.   Filtering Type: `list of object`
+    #  **NOTE:** The list of Holiday Hours that you send us must be comprehensive. For example, if you send us a list of Holiday Hours that does not include Holiday Hours that you sent in your last update, Yext considers the missing Holiday Hours to be deleted, and we remove them.   Array must be ordered.   Filtering Type: `list of object`
     attr_accessor :holiday_hours
 
     attr_accessor :monday

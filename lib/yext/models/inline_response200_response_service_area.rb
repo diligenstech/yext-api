@@ -16,7 +16,7 @@ require 'time'
 module Yext
   # Information about the area that is served by this entity. It is specified as a list of cities and/or postal codes.  **Only for Google My Business and Bing:** Currently, **serviceArea** is only supported by Google My Business and Bing and will not affect your listings on other sites.  Filtering Type: `object`  ``` Eligible For:     * healthcareFacility    * healthcareProfessional    * hotel    * location    * restaurant ```
   class InlineResponse200ResponseServiceArea
-    # A list of places served by the entity, where each place is either:  - a postal code, or  - the name of a city.    Array must be ordered.  Array may have a maximum of 200 elements.   Filtering Type: `list of text`
+    # A list of places served by the entity, where each place is either:  - a postal code, or  - the name of a city.   Array must be ordered.  Array may have a maximum of 200 elements.   Filtering Type: `list of text`
     attr_accessor :places
 
     # Attribute mapping from ruby-style variable name to JSON key.

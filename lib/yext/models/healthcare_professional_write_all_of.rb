@@ -63,6 +63,9 @@ module Yext
     # A list of the conditions treated by the healthcare provider   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  >Cannot Include: >* HTML markup
     attr_accessor :conditions_treated
 
+    # Information or messaging related to COVID-19.
+    attr_accessor :covid_messaging
+
     # Additional keywords you would like us to use when tracking your search performance   Array must be ordered.  Array may have a maximum of 5 elements. 
     attr_accessor :custom_keywords
 
@@ -328,6 +331,7 @@ module Yext
         :'certifications' => :'certifications',
         :'closed' => :'closed',
         :'conditions_treated' => :'conditionsTreated',
+        :'covid_messaging' => :'covidMessaging',
         :'custom_keywords' => :'customKeywords',
         :'degrees' => :'degrees',
         :'description' => :'description',
@@ -438,6 +442,7 @@ module Yext
         :'certifications' => :'Array<String>',
         :'closed' => :'Boolean',
         :'conditions_treated' => :'Array<String>',
+        :'covid_messaging' => :'String',
         :'custom_keywords' => :'Array<String>',
         :'degrees' => :'Array<String>',
         :'description' => :'String',
@@ -626,6 +631,10 @@ module Yext
         if (value = attributes[:'conditions_treated']).is_a?(Array)
           self.conditions_treated = value
         end
+      end
+
+      if attributes.key?(:'covid_messaging')
+        self.covid_messaging = attributes[:'covid_messaging']
       end
 
       if attributes.key?(:'custom_keywords')
@@ -1017,6 +1026,14 @@ module Yext
         invalid_properties.push('invalid value for "alternate_phone", the character length must be great than or equal to 0.')
       end
 
+      if !@covid_messaging.nil? && @covid_messaging.to_s.length > 15000
+        invalid_properties.push('invalid value for "covid_messaging", the character length must be smaller than or equal to 15000.')
+      end
+
+      if !@covid_messaging.nil? && @covid_messaging.to_s.length < 0
+        invalid_properties.push('invalid value for "covid_messaging", the character length must be great than or equal to 0.')
+      end
+
       if !@description.nil? && @description.to_s.length > 15000
         invalid_properties.push('invalid value for "description", the character length must be smaller than or equal to 15000.')
       end
@@ -1188,6 +1205,8 @@ module Yext
       return false if !@additional_hours_text.nil? && @additional_hours_text.to_s.length > 255
       return false if !@additional_hours_text.nil? && @additional_hours_text.to_s.length < 0
       return false if !@alternate_phone.nil? && @alternate_phone.to_s.length < 0
+      return false if !@covid_messaging.nil? && @covid_messaging.to_s.length > 15000
+      return false if !@covid_messaging.nil? && @covid_messaging.to_s.length < 0
       return false if !@description.nil? && @description.to_s.length > 15000
       return false if !@description.nil? && @description.to_s.length < 10
       return false if !@facebook_descriptor.nil? && @facebook_descriptor.to_s.length > 75
@@ -1323,6 +1342,20 @@ module Yext
     # @param [Object] conditions_treated Value to be assigned
     def conditions_treated=(conditions_treated)
       @conditions_treated = conditions_treated
+    end
+
+    # Custom attribute writer method with validation
+    # @param [Object] covid_messaging Value to be assigned
+    def covid_messaging=(covid_messaging)
+      if !covid_messaging.nil? && covid_messaging.to_s.length > 15000
+        fail ArgumentError, 'invalid value for "covid_messaging", the character length must be smaller than or equal to 15000.'
+      end
+
+      if !covid_messaging.nil? && covid_messaging.to_s.length < 0
+        fail ArgumentError, 'invalid value for "covid_messaging", the character length must be great than or equal to 0.'
+      end
+
+      @covid_messaging = covid_messaging
     end
 
     # Custom attribute writer method with validation
@@ -1811,6 +1844,7 @@ module Yext
           certifications == o.certifications &&
           closed == o.closed &&
           conditions_treated == o.conditions_treated &&
+          covid_messaging == o.covid_messaging &&
           custom_keywords == o.custom_keywords &&
           degrees == o.degrees &&
           description == o.description &&
@@ -1904,7 +1938,7 @@ module Yext
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [meta, name, address, accepting_new_patients, additional_hours_text, address_hidden, admitting_hospitals, alternate_names, alternate_phone, alternate_websites, associations, bios, brands, category_ids, certifications, closed, conditions_treated, custom_keywords, degrees, description, display_coordinate, dropoff_coordinate, education_list, emails, facebook_call_to_action, facebook_cover_photo, facebook_descriptor, facebook_name, facebook_override_city, facebook_page_url, facebook_profile_photo, facebook_vanity_url, fax, featured_message, first_name, first_party_review_page, frequently_asked_questions, gender, geomodifier, google_attributes, google_cover_photo, google_my_business_labels, google_place_id, google_profile_photo, google_website_override, headshot, holiday_hours_conversation_enabled, hours, impressum, instagram_handle, insurance_accepted, is_cluster_primary, iso_region_code, keywords, labels, landing_page_url, languages, last_name, local_phone, location_type, logo, main_phone, menu_url, middle_name, mobile_phone, npi, nudge_enabled, office_name, online_service_hours, order_url, payment_options, photo_gallery, pickup_coordinate, price_range, primary_conversation_contact, product_lists, questions_and_answers, rank_tracking_competitors, rank_tracking_enabled, rank_tracking_frequency, rank_tracking_query_templates, rank_tracking_sites, reservation_url, review_generation_url, review_response_conversation_enabled, routable_coordinate, service_area, service_area_places, services, timezone, toll_free_phone, tty_phone, twitter_handle, uber_link, uber_trip_branding, videos, walkable_coordinate, website_url, year_established].hash
+      [meta, name, address, accepting_new_patients, additional_hours_text, address_hidden, admitting_hospitals, alternate_names, alternate_phone, alternate_websites, associations, bios, brands, category_ids, certifications, closed, conditions_treated, covid_messaging, custom_keywords, degrees, description, display_coordinate, dropoff_coordinate, education_list, emails, facebook_call_to_action, facebook_cover_photo, facebook_descriptor, facebook_name, facebook_override_city, facebook_page_url, facebook_profile_photo, facebook_vanity_url, fax, featured_message, first_name, first_party_review_page, frequently_asked_questions, gender, geomodifier, google_attributes, google_cover_photo, google_my_business_labels, google_place_id, google_profile_photo, google_website_override, headshot, holiday_hours_conversation_enabled, hours, impressum, instagram_handle, insurance_accepted, is_cluster_primary, iso_region_code, keywords, labels, landing_page_url, languages, last_name, local_phone, location_type, logo, main_phone, menu_url, middle_name, mobile_phone, npi, nudge_enabled, office_name, online_service_hours, order_url, payment_options, photo_gallery, pickup_coordinate, price_range, primary_conversation_contact, product_lists, questions_and_answers, rank_tracking_competitors, rank_tracking_enabled, rank_tracking_frequency, rank_tracking_query_templates, rank_tracking_sites, reservation_url, review_generation_url, review_response_conversation_enabled, routable_coordinate, service_area, service_area_places, services, timezone, toll_free_phone, tty_phone, twitter_handle, uber_link, uber_trip_branding, videos, walkable_coordinate, website_url, year_established].hash
     end
 
     # Builds the object from hash

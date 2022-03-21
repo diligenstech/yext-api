@@ -21,6 +21,21 @@
 | **category_ids** | **Array&lt;String&gt;** | Yext Category IDs.  IDs must be valid and selectable (i.e., cannot be parent categories).  NOTE: The list of category IDs that you send us must be comprehensive. For example, if you send us a list of IDs that does not include IDs that you sent in your last update, Yext considers the missing categories to be deleted, and we remove them from your listings.  | [optional] |
 | **closed** | **Boolean** | Indicates whether the entity is closed | [optional] |
 | **conditions_treated** | **Array&lt;String&gt;** | A list of the conditions treated by the healthcare provider   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Cannot Include: &gt;* HTML markup | [optional] |
+| **covid_messaging** | **String** | Information or messaging related to COVID-19. | [optional] |
+| **covid_test_appointment_url** | **String** | An appointment URL for scheduling a COVID-19 test. | [optional] |
+| **covid_testing_appointment_required** | **Boolean** | Indicates whether an appointment is required for a COVID-19 test. | [optional] |
+| **covid_testing_drive_through_site** | **Boolean** | Indicates whether location is a drive-through site for COVID-19 tests. | [optional] |
+| **covid_testing_is_free** | **Boolean** | Indicates whether location offers free COVID-19 testing. | [optional] |
+| **covid_testing_patient_restrictions** | **Boolean** | Indicates whether there are patient restrictions for COVID-19 testing. | [optional] |
+| **covid_testing_referral_required** | **Boolean** | Indicates whether a referral is required for COVID-19 testing. | [optional] |
+| **covid_testing_site_instructions** | **String** | Information or instructions for the COVID-19 testing site. | [optional] |
+| **covid_vaccine_appointment_required** | **Boolean** | Indicates whether an appointment is required for a COVID-19 vaccine. | [optional] |
+| **covid_vaccine_drive_through_site** | **Boolean** | Indicates whether location is a drive-through site for COVID-19 vaccines. | [optional] |
+| **covid_vaccine_information_url** | **String** | An information URL for more information about COVID-19 vaccines. | [optional] |
+| **covid_vaccine_patient_restrictions** | **Boolean** | Indicates whether there are patient restrictions for a COVID-19 vaccine. | [optional] |
+| **covid_vaccine_referral_required** | **Boolean** | Indicates whether a referral is required for a COVID-19 vaccine. | [optional] |
+| **covid_vaccine_site_instructions** | **String** | Information or instructions for the COVID-19 vaccination site. | [optional] |
+| **covid_vaccines_offered** | **Array&lt;String&gt;** | Indicates which COVID-19 vaccines the location offers. | [optional] |
 | **custom_keywords** | **Array&lt;String&gt;** | Additional keywords you would like us to use when tracking your search performance   Array must be ordered.  Array may have a maximum of 5 elements.  | [optional] |
 | **description** | **String** | A description of the entity   Cannot Include: * HTML markup | [optional] |
 | **display_coordinate** | [**AtmWriteAllOfDisplayCoordinate**](AtmWriteAllOfDisplayCoordinate.md) |  | [optional] |
@@ -38,6 +53,7 @@
 | **featured_message** | [**AtmWriteAllOfFeaturedMessage**](AtmWriteAllOfFeaturedMessage.md) |  | [optional] |
 | **first_party_review_page** | **String** | Link to the review-collection page, where consumers can leave first-party reviews | [optional] |
 | **frequently_asked_questions** | [**Array&lt;AtmWriteAllOfFrequentlyAskedQuestions&gt;**](AtmWriteAllOfFrequentlyAskedQuestions.md) | A list of questions that are frequently asked about this entity   Array must be ordered.  Array may have a maximum of 100 elements.  | [optional] |
+| **fully_vaccinated_staff** | **Boolean** | Indicates whether the staff is vaccinated against COVID-19. | [optional] |
 | **geomodifier** | **String** | Provides additional information on where the entity can be found (e.g., &#x60;Times Square&#x60;, &#x60;Global Center Mall&#x60;) | [optional] |
 | **google_attributes** | **Object** | The unique IDs of the entity&#39;s Google My Business keywords, as well as the unique IDs of any values selected for each keyword.  Valid keywords (e.g., &#x60;has_drive_through&#x60;, &#x60;has_fitting_room&#x60;, &#x60;kitchen_in_room&#x60;) are determined by the entity&#39;s primary category. A full list of keywords can be retrieved with the Google Fields: List endpoint.  Keyword values provide more details on how the keyword applies to the entity (e.g., if the keyword is &#x60;has_drive_through&#x60;, its values may be &#x60;true&#x60; or &#x60;false&#x60;).  * If the **&#x60;v&#x60;** parameter is before &#x60;20181204&#x60;: **&#x60;googleAttributes&#x60;** is formatted as a map of key-value pairs (e.g., &#x60;[{ \&quot;id\&quot;: \&quot;has_wheelchair_accessible_entrance\&quot;, \&quot;values\&quot;: [ \&quot;true\&quot; ] }]&#x60;) * If the **&#x60;v&#x60;** parameter is on or after &#x60;20181204&#x60;: the contents are formatted as a list of objects (e.g., &#x60;{ \&quot;has_wheelchair_accessible_entrance\&quot;: [ \&quot;true\&quot; ]}&#x60;)  **NOTE:** The latest Google Attributes are available via the Google Fields: List endpoint. Google Attributes are managed by Google and are subject to change without notice. To prevent errors, make sure your API implementation is not dependent on the presence of specific attributes. | [optional] |
 | **google_cover_photo** | [**AtmWriteAllOfGoogleCoverPhoto**](AtmWriteAllOfGoogleCoverPhoto.md) |  | [optional] |
@@ -119,6 +135,21 @@ instance = Yext::HealthcareFacilityWriteAllOf.new(
   category_ids: null,
   closed: null,
   conditions_treated: null,
+  covid_messaging: null,
+  covid_test_appointment_url: null,
+  covid_testing_appointment_required: null,
+  covid_testing_drive_through_site: null,
+  covid_testing_is_free: null,
+  covid_testing_patient_restrictions: null,
+  covid_testing_referral_required: null,
+  covid_testing_site_instructions: null,
+  covid_vaccine_appointment_required: null,
+  covid_vaccine_drive_through_site: null,
+  covid_vaccine_information_url: null,
+  covid_vaccine_patient_restrictions: null,
+  covid_vaccine_referral_required: null,
+  covid_vaccine_site_instructions: null,
+  covid_vaccines_offered: null,
   custom_keywords: null,
   description: null,
   display_coordinate: null,
@@ -136,6 +167,7 @@ instance = Yext::HealthcareFacilityWriteAllOf.new(
   featured_message: null,
   first_party_review_page: null,
   frequently_asked_questions: null,
+  fully_vaccinated_staff: null,
   geomodifier: null,
   google_attributes: null,
   google_cover_photo: null,

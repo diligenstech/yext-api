@@ -14,11 +14,11 @@ require 'date'
 require 'time'
 
 module Yext
-  # Contains the daily kitchen hours, holiday kitchen hours, and reopen date for the Entity.  Each day is represented by a sub-field of `kitchenHours`. (e.g. `monday`, `tuesday`, etc.) Open times can be specified per day through the `openIntervals` field and the `isClosed` flag. Similarly, holiday kitchen hours are represented by the `holidayHours` sub-field. Setting the `reopenDate` sub-field indicates that the business is temporarily closed and will reopen on the specified date. SPECIAL CASES: * To indicate that an Entity is open 24 hours on a specific day, set start to 00:00 and end to 23:59 in `openIntervals` for that day. * To indicate that an Entity has split hours on a specific day (e.g., open from 9:00 AM to 12:00 PM and again from 1:00 PM to 5:00 PM), supply two or more smokeFreeProperty `openIntervals` values with non-overlapping sets of hours. * If you are providing `openIntervals`, you may not set `isClosed` to true for that day.
+  # Contains the daily kitchen hours, holiday kitchen hours, and reopen date for the Entity.  Each day is represented by a sub-field of `kitchenHours`. (e.g. `monday`, `tuesday`, etc.) Open times can be specified per day through the `openIntervals` field and the `isClosed` flag. Similarly, holiday kitchen hours are represented by the `holidayHours` sub-field. Setting the `reopenDate` sub-field indicates that the business is temporarily closed and will reopen on the specified date. SPECIAL CASES: * To indicate that an Entity is open 24 hours on a specific day, set start to 00:00 and end to 23:59 in `openIntervals` for that day. * To indicate that an Entity has split hours on a specific day (e.g., open from 9:00 AM to 12:00 PM and again from 1:00 PM to 5:00 PM), supply two or more `openIntervals` values with non-overlapping sets of hours. * If you are providing `openIntervals`, you may not set `isClosed` to true for that day.
   class HotelWriteAllOfKitchenHours
     attr_accessor :friday
 
-    #  **NOTE:** The list of Holiday Hours that you send us must be comprehensive. For example, if you send us a list of Holiday Hours that does not include Holiday Hours that you sent in your last update, Yext considers the missing Holiday Hours to be deleted, and we remove them.    Array must be ordered. 
+    #  **NOTE:** The list of Holiday Hours that you send us must be comprehensive. For example, if you send us a list of Holiday Hours that does not include Holiday Hours that you sent in your last update, Yext considers the missing Holiday Hours to be deleted, and we remove them.   Array must be ordered. 
     attr_accessor :holiday_hours
 
     attr_accessor :monday

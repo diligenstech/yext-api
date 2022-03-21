@@ -395,6 +395,100 @@ describe Yext::InlineResponse200ResponseEntities do
     end
   end
 
+  describe 'test attribute "covid_messaging"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "covid_test_appointment_url"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "covid_testing_appointment_required"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "covid_testing_drive_through_site"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "covid_testing_is_free"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "covid_testing_patient_restrictions"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "covid_testing_referral_required"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "covid_testing_site_instructions"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "covid_vaccine_appointment_required"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "covid_vaccine_drive_through_site"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "covid_vaccine_information_url"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "covid_vaccine_patient_restrictions"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "covid_vaccine_referral_required"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "covid_vaccine_site_instructions"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "covid_vaccines_offered"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('Array<String>', ["PFIZER", "MODERNA", "JOHNSON_&_JOHNSON"])
+      # validator.allowable_values.each do |value|
+      #   expect { instance.covid_vaccines_offered = value }.not_to raise_error
+      # end
+    end
+  end
+
   describe 'test attribute "currency_exchange"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -650,6 +744,12 @@ describe Yext::InlineResponse200ResponseEntities do
       # validator.allowable_values.each do |value|
       #   expect { instance.front_desk = value }.not_to raise_error
       # end
+    end
+  end
+
+  describe 'test attribute "fully_vaccinated_staff"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
@@ -1144,7 +1244,7 @@ describe Yext::InlineResponse200ResponseEntities do
   describe 'test attribute "payment_options"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('Array<String>', ["ALIPAY", "AMERICANEXPRESS", "ANDROIDPAY", "APPLEPAY", "ATM", "ATMQUICK", "BACS", "BANCONTACT", "BANKDEPOSIT", "BANKPAY", "BGO", "BITCOIN", "Bar", "CARTASI", "CASH", "CCS", "CHECK", "CONB", "CVVV", "DEBITNOTE", "DINERSCLUB", "DIRECTDEBIT", "DISCOVER", "ECKARTE", "ECOCHEQUE", "EKENA", "EMV", "FINANCING", "GOPAY", "HAYAKAKEN", "HEBAG", "IBOD", "ICCARDS", "ICOCA", "ID", "IDEAL", "INCA", "INVOICE", "JCB", "JCoinPay", "JKOPAY", "KITACA", "KLA", "KLARNA", "LINEPAY", "MAESTRO", "MANACA", "MASTERCARD", "MIPAY", "MONIZZE", "MPAY", "Manuelle Lastsch", "Merpay", "NANACO", "NEXI", "NIMOCA", "OREM", "PASMO", "PAYBACKPAY", "PAYBOX", "PAYCONIQ", "PAYPAL", "PAYPAY", "PAYSEC", "PIN", "POSTEPAY", "QRCODE", "QUICPAY", "RAKUTENEDY", "RAKUTENPAY", "SAMSUNGPAY", "SODEXO", "SUGOCA", "SUICA", "SWISH", "TICKETRESTAURANT", "TOICA", "TRAVELERSCHECK", "TSCUBIC", "TWINT", "UNIONPAY", "VEV", "VISA", "VISAELECTRON", "VOB", "VOUCHER", "VPAY", "WAON", "WECHATPAY", "WIRETRANSFER", "Yucho Pay", "ZELLE", "auPay", "dBarai", "Überweisung"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('Array<String>', ["ALIPAY", "AMERICANEXPRESS", "ANDROIDPAY", "ATM", "ATMQUICK", "BACS", "BGO", "BITCOIN", "CASH", "CHECK", "CONB", "CVVV", "DEBITNOTE", "DINERSCLUB", "DISCOVER", "FINANCING", "IDEAL", "INCA", "INVOICE", "JCB", "KLA", "MASTERCARD", "MONSTERCARD", "OREM", "PAYBOX", "PAYPAL", "SODEXO", "TEST", "TRAVELERSCHECK", "VEV", "VISA", "VOB", "YEET"])
       # validator.allowable_values.each do |value|
       #   expect { instance.payment_options = value }.not_to raise_error
       # end
@@ -1160,7 +1260,7 @@ describe Yext::InlineResponse200ResponseEntities do
   describe 'test attribute "pets_allowed"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["PETS_WELCOME", "PETS_WELCOME_FOR_FREE", "NOT_APPLICABLE"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["PETS_WELCOME", "PETS_WELCOME_FOR_FREE", "NOT_APPLICABLE", "NOT_ALLOWED"])
       # validator.allowable_values.each do |value|
       #   expect { instance.pets_allowed = value }.not_to raise_error
       # end

@@ -17,7 +17,7 @@ module Yext
   class HotelWrite < EntityWrite
     attr_accessor :meta
 
-    #    Cannot Include: * HTML markup
+    #   Cannot Include: * HTML markup
     attr_accessor :name
 
     attr_accessor :address
@@ -54,7 +54,7 @@ module Yext
     # The URL where consumers can download the entity's Android app
     attr_accessor :android_app_url
 
-    # Association memberships relevant to the entity (e.g., `\"New York Doctors Association\"`) All strings must be non-empty when trimmed of whitespace.    Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  >Cannot Include: >* HTML markup
+    # Association memberships relevant to the entity (e.g., `\"New York Doctors Association\"`) All strings must be non-empty when trimmed of whitespace.   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  >Cannot Include: >* HTML markup
     attr_accessor :associations
 
     # Indicates whether the entity offers babysitting.
@@ -80,7 +80,7 @@ module Yext
     # Indicates whether the entity has a boutique store. Gift shop or convenience store are not eligible.
     attr_accessor :boutique_stores
 
-    # Brands sold by this entity All strings must be non-empty when trimmed of whitespace.    Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  >Cannot Include: >* HTML markup
+    # Brands sold by this entity All strings must be non-empty when trimmed of whitespace.   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  >Cannot Include: >* HTML markup
     attr_accessor :brands
 
     # Indicates whether the entity offers breakfast.
@@ -151,7 +151,7 @@ module Yext
     # Indicates whether the entity has an elliptical machine.
     attr_accessor :elliptical_machine
 
-    # Emails addresses for this entity's point of contact  Must be valid email addresses    Array must be ordered.  Array may have a maximum of 5 elements. 
+    # Emails addresses for this entity's point of contact  Must be valid email addresses   Array must be ordered.  Array may have a maximum of 5 elements. 
     attr_accessor :emails
 
     attr_accessor :facebook_call_to_action
@@ -197,6 +197,9 @@ module Yext
 
     # Indicates whether the entity has a front desk.
     attr_accessor :front_desk
+
+    # Indicates whether the staff is vaccinated against COVID-19.
+    attr_accessor :fully_vaccinated_staff
 
     # Indicates whether the entity has a game room.
     attr_accessor :game_room
@@ -257,7 +260,7 @@ module Yext
     # The ISO 3166-2 region code for the entity  Yext will determine the entity's code and update **`isoRegionCode`** with that value. If Yext is unable to determine the code for the entity, the entity'ss ISO 3166-1 alpha-2 country code will be used.
     attr_accessor :iso_region_code
 
-    # Keywords that describe the entity.  All strings must be non-empty when trimmed of whitespace.    Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  >Cannot Include: >* HTML markup
+    # Keywords that describe the entity.  All strings must be non-empty when trimmed of whitespace.   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  >Cannot Include: >* HTML markup
     attr_accessor :keywords
 
     # Indicates if the entity is kid friendly.
@@ -277,7 +280,7 @@ module Yext
     # The URL of this entity's Landing Page that was created with Yext Pages
     attr_accessor :landing_page_url
 
-    # The langauges in which consumers can commicate with this entity or its staff members All strings must be non-empty when trimmed of whitespace.    Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  >Cannot Include: >* HTML markup
+    # The langauges in which consumers can commicate with this entity or its staff members All strings must be non-empty when trimmed of whitespace.   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  >Cannot Include: >* HTML markup
     attr_accessor :languages
 
     # Indicates whether the entity offers laundry services.
@@ -345,7 +348,7 @@ module Yext
     # Indicates if the entity is pet friendly.
     attr_accessor :pets_allowed
 
-    #  **NOTE:** The list of photos that you send us must be comprehensive. For example, if you send us a list of photos that does not include photos that you sent in your last update, Yext considers the missing photos to be deleted, and we remove them from your listings.    Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  >Supported Aspect Ratios: >* 1 x 1 >* 4 x 3 >* 3 x 2 >* 5 x 3 >* 16 x 9 >* 3 x 1 >* 2 x 3 >* 5 x 7 >* 4 x 5 >* 4 x 1 > >**NOTE**: Maximum image size is 5mb after normalization and padding (if applicable). As well, there is a 6 second download limit from the image host. >
+    #  **NOTE:** The list of photos that you send us must be comprehensive. For example, if you send us a list of photos that does not include photos that you sent in your last update, Yext considers the missing photos to be deleted, and we remove them from your listings.   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  >Supported Aspect Ratios: >* 1 x 1 >* 4 x 3 >* 3 x 2 >* 5 x 3 >* 16 x 9 >* 3 x 1 >* 2 x 3 >* 5 x 7 >* 4 x 5 >* 4 x 1 > >**NOTE**: Maximum image size is 5mb after normalization and padding (if applicable). As well, there is a 6 second download limit from the image host. >
     attr_accessor :photo_gallery
 
     attr_accessor :pickup_coordinate
@@ -415,7 +418,7 @@ module Yext
     # Information about the area that is served by this entity. It is specified as a list of service area names and their associated types. **Only for Google My Business and Bing:** Currently, **serviceArea** is only supported by Google My Business and Bing and will not affect your listings on other sites.   Array may have a maximum of 200 elements. 
     attr_accessor :service_area_places
 
-    # Services offered by this entity  All strings must be non-empty when trimmed of whitespace.    Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  >Cannot Include: >* HTML markup
+    # Services offered by this entity  All strings must be non-empty when trimmed of whitespace.   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  >Cannot Include: >* HTML markup
     attr_accessor :services
 
     # Indicates if the entity is smoke free.
@@ -467,7 +470,7 @@ module Yext
     # Indicates whether the entity has a vending machine.
     attr_accessor :vending_machine
 
-    # Valid YouTube URLs for embedding a video on some publisher sites  **NOTE:** Currently, only the first URL in the Array appears in your listings.    Array must be ordered. 
+    # Valid YouTube URLs for embedding a video on some publisher sites  **NOTE:** Currently, only the first URL in the Array appears in your listings.   Array must be ordered. 
     attr_accessor :videos
 
     # Indicates whether the entity has a wading pool.
@@ -600,6 +603,7 @@ module Yext
         :'free_weights' => :'freeWeights',
         :'frequently_asked_questions' => :'frequentlyAskedQuestions',
         :'front_desk' => :'frontDesk',
+        :'fully_vaccinated_staff' => :'fullyVaccinatedStaff',
         :'game_room' => :'gameRoom',
         :'geomodifier' => :'geomodifier',
         :'gift_shop' => :'giftShop',
@@ -724,7 +728,7 @@ module Yext
         :'meta' => :'AtmWriteAllOfMeta',
         :'name' => :'String',
         :'address' => :'AtmWriteAllOfAddress',
-        :'access_hours' => :'AtmWriteAllOfAccessHours',
+        :'access_hours' => :'HotelWriteAllOfAccessHours',
         :'additional_hours_text' => :'String',
         :'address_hidden' => :'Boolean',
         :'adult_pool' => :'String',
@@ -786,6 +790,7 @@ module Yext
         :'free_weights' => :'String',
         :'frequently_asked_questions' => :'Array<AtmWriteAllOfFrequentlyAskedQuestions>',
         :'front_desk' => :'String',
+        :'fully_vaccinated_staff' => :'Boolean',
         :'game_room' => :'String',
         :'geomodifier' => :'String',
         :'gift_shop' => :'String',
@@ -800,7 +805,7 @@ module Yext
         :'holiday_hours_conversation_enabled' => :'Boolean',
         :'horseback_riding' => :'String',
         :'hot_tub' => :'String',
-        :'hours' => :'AtmWriteAllOfHours',
+        :'hours' => :'HotelWriteAllOfHours',
         :'housekeeping' => :'String',
         :'impressum' => :'String',
         :'indoor_pool_count' => :'Float',
@@ -861,7 +866,7 @@ module Yext
         :'sauna' => :'String',
         :'scuba' => :'String',
         :'self_parking' => :'String',
-        :'service_area' => :'HealthcareFacilityWriteAllOfServiceArea',
+        :'service_area' => :'HotelWriteAllOfServiceArea',
         :'service_area_places' => :'Array<HealthcareFacilityWriteAllOfServiceAreaPlaces>',
         :'services' => :'Array<String>',
         :'smoke_free_property' => :'String',
@@ -1205,6 +1210,10 @@ module Yext
 
       if attributes.key?(:'front_desk')
         self.front_desk = attributes[:'front_desk']
+      end
+
+      if attributes.key?(:'fully_vaccinated_staff')
+        self.fully_vaccinated_staff = attributes[:'fully_vaccinated_staff']
       end
 
       if attributes.key?(:'game_room')
@@ -2010,7 +2019,7 @@ module Yext
       return false if !@outdoor_pool_count.nil? && @outdoor_pool_count < 0
       parking_validator = EnumAttributeValidator.new('String', ["PARKING_AVAILABLE", "PARKING_AVAILABLE_FOR_FREE", "NOT_APPLICABLE"])
       return false unless parking_validator.valid?(@parking)
-      pets_allowed_validator = EnumAttributeValidator.new('String', ["PETS_WELCOME", "PETS_WELCOME_FOR_FREE", "NOT_APPLICABLE"])
+      pets_allowed_validator = EnumAttributeValidator.new('String', ["PETS_WELCOME", "PETS_WELCOME_FOR_FREE", "NOT_APPLICABLE", "NOT_ALLOWED"])
       return false unless pets_allowed_validator.valid?(@pets_allowed)
       return false if !@primary_conversation_contact.nil? && @primary_conversation_contact.to_s.length < 0
       private_beach_validator = EnumAttributeValidator.new('String', ["YES", "NO", "NOT_APPLICABLE"])
@@ -2940,7 +2949,7 @@ module Yext
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] pets_allowed Object to be assigned
     def pets_allowed=(pets_allowed)
-      validator = EnumAttributeValidator.new('String', ["PETS_WELCOME", "PETS_WELCOME_FOR_FREE", "NOT_APPLICABLE"])
+      validator = EnumAttributeValidator.new('String', ["PETS_WELCOME", "PETS_WELCOME_FOR_FREE", "NOT_APPLICABLE", "NOT_ALLOWED"])
       unless validator.valid?(pets_allowed)
         fail ArgumentError, "invalid value for \"pets_allowed\", must be one of #{validator.allowable_values}."
       end
@@ -3449,6 +3458,7 @@ module Yext
           free_weights == o.free_weights &&
           frequently_asked_questions == o.frequently_asked_questions &&
           front_desk == o.front_desk &&
+          fully_vaccinated_staff == o.fully_vaccinated_staff &&
           game_room == o.game_room &&
           geomodifier == o.geomodifier &&
           gift_shop == o.gift_shop &&
@@ -3570,7 +3580,7 @@ module Yext
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [meta, name, address, access_hours, additional_hours_text, address_hidden, adult_pool, airport_shuttle, airport_transfer, all_inclusive, alternate_names, alternate_phone, alternate_websites, android_app_url, associations, babysitting_offered, baggage_storage, bar, beach_access, beach_front_property, bicycles, bios, boutique_stores, brands, breakfast, brunch_hours, business_center, calendars, car_rental, casino, category_ids, cats_allowed, check_in_time, check_out_time, classification_rating, closed, concierge, convenience_store, currency_exchange, custom_keywords, description, display_coordinate, doctor_on_call, dogs_allowed, dropoff_coordinate, electric_charging_station, elevator, elliptical_machine, emails, facebook_call_to_action, facebook_cover_photo, facebook_descriptor, facebook_name, facebook_override_city, facebook_page_url, facebook_profile_photo, facebook_vanity_url, fax, featured_message, first_party_review_page, fitness_center, floor_count, free_weights, frequently_asked_questions, front_desk, game_room, geomodifier, gift_shop, golf, google_attributes, google_cover_photo, google_my_business_labels, google_place_id, google_profile_photo, google_website_override, happy_hours, holiday_hours_conversation_enabled, horseback_riding, hot_tub, hours, housekeeping, impressum, indoor_pool_count, instagram_handle, ios_app_url, iso_region_code, keywords, kid_friendly, kids_club, kids_stay_free, kitchen_hours, labels, landing_page_url, languages, laundry, lazy_river, lifeguard, local_phone, local_shuttle, location_type, logo, main_phone, massage, max_age_of_kids_stay_free, max_number_of_kids_stay_free, meeting_room_count, menu_url, menus, mobile_phone, mobility_accessible, nightclub, nudge_enabled, order_url, outdoor_pool_count, parking, payment_options, pets_allowed, photo_gallery, pickup_coordinate, primary_conversation_contact, private_beach, private_car_service, product_lists, questions_and_answers, rank_tracking_competitors, rank_tracking_enabled, rank_tracking_frequency, rank_tracking_query_templates, rank_tracking_sites, reservation_url, restaurant_count, review_generation_url, review_response_conversation_enabled, room_count, room_service, routable_coordinate, salon, sauna, scuba, self_parking, service_area, service_area_places, services, smoke_free_property, snorkeling, social_hour, spa, table_service, tennis, thermal_pool, timezone, toll_free_phone, treadmill, tty_phone, turndown_service, twitter_handle, uber_link, uber_trip_branding, valet_parking, vending_machine, videos, wading_pool, wake_up_calls, walkable_coordinate, water_park, water_skiing, watercraft, waterslide, wave_pool, website_url, weight_machine, wheelchair_accessible, wifi_available, year_established, year_last_renovated].hash
+      [meta, name, address, access_hours, additional_hours_text, address_hidden, adult_pool, airport_shuttle, airport_transfer, all_inclusive, alternate_names, alternate_phone, alternate_websites, android_app_url, associations, babysitting_offered, baggage_storage, bar, beach_access, beach_front_property, bicycles, bios, boutique_stores, brands, breakfast, brunch_hours, business_center, calendars, car_rental, casino, category_ids, cats_allowed, check_in_time, check_out_time, classification_rating, closed, concierge, convenience_store, currency_exchange, custom_keywords, description, display_coordinate, doctor_on_call, dogs_allowed, dropoff_coordinate, electric_charging_station, elevator, elliptical_machine, emails, facebook_call_to_action, facebook_cover_photo, facebook_descriptor, facebook_name, facebook_override_city, facebook_page_url, facebook_profile_photo, facebook_vanity_url, fax, featured_message, first_party_review_page, fitness_center, floor_count, free_weights, frequently_asked_questions, front_desk, fully_vaccinated_staff, game_room, geomodifier, gift_shop, golf, google_attributes, google_cover_photo, google_my_business_labels, google_place_id, google_profile_photo, google_website_override, happy_hours, holiday_hours_conversation_enabled, horseback_riding, hot_tub, hours, housekeeping, impressum, indoor_pool_count, instagram_handle, ios_app_url, iso_region_code, keywords, kid_friendly, kids_club, kids_stay_free, kitchen_hours, labels, landing_page_url, languages, laundry, lazy_river, lifeguard, local_phone, local_shuttle, location_type, logo, main_phone, massage, max_age_of_kids_stay_free, max_number_of_kids_stay_free, meeting_room_count, menu_url, menus, mobile_phone, mobility_accessible, nightclub, nudge_enabled, order_url, outdoor_pool_count, parking, payment_options, pets_allowed, photo_gallery, pickup_coordinate, primary_conversation_contact, private_beach, private_car_service, product_lists, questions_and_answers, rank_tracking_competitors, rank_tracking_enabled, rank_tracking_frequency, rank_tracking_query_templates, rank_tracking_sites, reservation_url, restaurant_count, review_generation_url, review_response_conversation_enabled, room_count, room_service, routable_coordinate, salon, sauna, scuba, self_parking, service_area, service_area_places, services, smoke_free_property, snorkeling, social_hour, spa, table_service, tennis, thermal_pool, timezone, toll_free_phone, treadmill, tty_phone, turndown_service, twitter_handle, uber_link, uber_trip_branding, valet_parking, vending_machine, videos, wading_pool, wake_up_calls, walkable_coordinate, water_park, water_skiing, watercraft, waterslide, wave_pool, website_url, weight_machine, wheelchair_accessible, wifi_available, year_established, year_last_renovated].hash
     end
 
     # Builds the object from hash

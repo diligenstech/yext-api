@@ -21,6 +21,7 @@
 | **certifications** | **Array&lt;String&gt;** | A list of the certifications held by the healthcare professional **NOTE:** This field is only available to locations whose **&#x60;entityType&#x60;** is &#x60;healthcareProfessional&#x60;.    Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Cannot Include: &gt;* HTML markup | [optional] |
 | **closed** | **Boolean** | Indicates whether the entity is closed | [optional] |
 | **conditions_treated** | **Array&lt;String&gt;** | A list of the conditions treated by the healthcare provider   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Cannot Include: &gt;* HTML markup | [optional] |
+| **covid_messaging** | **String** | Information or messaging related to COVID-19. | [optional] |
 | **custom_keywords** | **Array&lt;String&gt;** | Additional keywords you would like us to use when tracking your search performance   Array must be ordered.  Array may have a maximum of 5 elements.  | [optional] |
 | **degrees** | **Array&lt;String&gt;** | A list of the degrees earned by the healthcare professional   Array must be ordered.  | [optional] |
 | **description** | **String** | A description of the entity   Cannot Include: * HTML markup | [optional] |
@@ -127,6 +128,7 @@ instance = Yext::HealthcareProfessionalWrite.new(
   certifications: null,
   closed: null,
   conditions_treated: null,
+  covid_messaging: null,
   custom_keywords: null,
   degrees: null,
   description: null,

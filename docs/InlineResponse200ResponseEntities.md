@@ -53,6 +53,21 @@
 | **concierge** | **String** | Indicates whether the entity offers concierge service.  Filtering Type: &#x60;option&#x60;  &#x60;&#x60;&#x60; Eligible For:     * hotel &#x60;&#x60;&#x60; | [optional] |
 | **conditions_treated** | **Array&lt;String&gt;** | A list of the conditions treated by the healthcare provider   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Cannot Include: &gt;* HTML markup  Filtering Type: &#x60;list of text&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * healthcareProfessional &#x60;&#x60;&#x60; | [optional] |
 | **convenience_store** | **String** | Indicates whether the entity has a convenience store.  Filtering Type: &#x60;option&#x60;  &#x60;&#x60;&#x60; Eligible For:     * hotel &#x60;&#x60;&#x60; | [optional] |
+| **covid_messaging** | **String** | Information or messaging related to COVID-19.  Filtering Type: &#x60;text&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * healthcareProfessional    * location &#x60;&#x60;&#x60; | [optional] |
+| **covid_test_appointment_url** | **String** | An appointment URL for scheduling a COVID-19 test.  Filtering Type: &#x60;text&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * location &#x60;&#x60;&#x60; | [optional] |
+| **covid_testing_appointment_required** | **Boolean** | Indicates whether an appointment is required for a COVID-19 test.  Filtering Type: &#x60;boolean&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * location &#x60;&#x60;&#x60; | [optional] |
+| **covid_testing_drive_through_site** | **Boolean** | Indicates whether location is a drive-through site for COVID-19 tests.  Filtering Type: &#x60;boolean&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * location &#x60;&#x60;&#x60; | [optional] |
+| **covid_testing_is_free** | **Boolean** | Indicates whether location offers free COVID-19 testing.  Filtering Type: &#x60;boolean&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * location &#x60;&#x60;&#x60; | [optional] |
+| **covid_testing_patient_restrictions** | **Boolean** | Indicates whether there are patient restrictions for COVID-19 testing.  Filtering Type: &#x60;boolean&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * location &#x60;&#x60;&#x60; | [optional] |
+| **covid_testing_referral_required** | **Boolean** | Indicates whether a referral is required for COVID-19 testing.  Filtering Type: &#x60;boolean&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * location &#x60;&#x60;&#x60; | [optional] |
+| **covid_testing_site_instructions** | **String** | Information or instructions for the COVID-19 testing site.  Filtering Type: &#x60;text&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * location &#x60;&#x60;&#x60; | [optional] |
+| **covid_vaccine_appointment_required** | **Boolean** | Indicates whether an appointment is required for a COVID-19 vaccine.  Filtering Type: &#x60;boolean&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * location &#x60;&#x60;&#x60; | [optional] |
+| **covid_vaccine_drive_through_site** | **Boolean** | Indicates whether location is a drive-through site for COVID-19 vaccines.  Filtering Type: &#x60;boolean&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * location &#x60;&#x60;&#x60; | [optional] |
+| **covid_vaccine_information_url** | **String** | An information URL for more information about COVID-19 vaccines.  Filtering Type: &#x60;text&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * location &#x60;&#x60;&#x60; | [optional] |
+| **covid_vaccine_patient_restrictions** | **Boolean** | Indicates whether there are patient restrictions for a COVID-19 vaccine.  Filtering Type: &#x60;boolean&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * location &#x60;&#x60;&#x60; | [optional] |
+| **covid_vaccine_referral_required** | **Boolean** | Indicates whether a referral is required for a COVID-19 vaccine.  Filtering Type: &#x60;boolean&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * location &#x60;&#x60;&#x60; | [optional] |
+| **covid_vaccine_site_instructions** | **String** | Information or instructions for the COVID-19 vaccination site.  Filtering Type: &#x60;text&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * location &#x60;&#x60;&#x60; | [optional] |
+| **covid_vaccines_offered** | **Array&lt;String&gt;** | Indicates which COVID-19 vaccines the location offers.  Filtering Type: &#x60;list of option&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * location &#x60;&#x60;&#x60; | [optional] |
 | **currency_exchange** | **String** | Indicates whether the entity offers currency exchange services.  Filtering Type: &#x60;option&#x60;  &#x60;&#x60;&#x60; Eligible For:     * hotel &#x60;&#x60;&#x60; | [optional] |
 | **custom_keywords** | **Array&lt;String&gt;** | Additional keywords you would like us to use when tracking your search performance   Array must be ordered.  Array may have a maximum of 5 elements.   Filtering Type: &#x60;list of text&#x60;  &#x60;&#x60;&#x60; Eligible For:     * atm    * financialProfessional    * healthcareFacility    * healthcareProfessional    * hotel    * location    * restaurant &#x60;&#x60;&#x60; | [optional] |
 | **date_posted** | **Date** | The date this entity was posted  Filtering Type: &#x60;date&#x60;  &#x60;&#x60;&#x60; Eligible For:     * job &#x60;&#x60;&#x60; | [optional] |
@@ -88,6 +103,7 @@
 | **free_weights** | **String** | Indicates whether the entity has free weights.  Filtering Type: &#x60;option&#x60;  &#x60;&#x60;&#x60; Eligible For:     * hotel &#x60;&#x60;&#x60; | [optional] |
 | **frequently_asked_questions** | [**Array&lt;InlineResponse200ResponseFrequentlyAskedQuestions&gt;**](InlineResponse200ResponseFrequentlyAskedQuestions.md) | A list of questions that are frequently asked about this entity   Array must be ordered.  Array may have a maximum of 100 elements.   Filtering Type: &#x60;list of object&#x60;  &#x60;&#x60;&#x60; Eligible For:     * atm    * financialProfessional    * healthcareFacility    * healthcareProfessional    * hotel    * location    * restaurant &#x60;&#x60;&#x60; | [optional] |
 | **front_desk** | **String** | Indicates whether the entity has a front desk.  Filtering Type: &#x60;option&#x60;  &#x60;&#x60;&#x60; Eligible For:     * hotel &#x60;&#x60;&#x60; | [optional] |
+| **fully_vaccinated_staff** | **Boolean** | Indicates whether the staff is vaccinated against COVID-19.  Filtering Type: &#x60;boolean&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareFacility    * hotel    * location    * restaurant &#x60;&#x60;&#x60; | [optional] |
 | **game_room** | **String** | Indicates whether the entity has a game room.  Filtering Type: &#x60;option&#x60;  &#x60;&#x60;&#x60; Eligible For:     * hotel &#x60;&#x60;&#x60; | [optional] |
 | **gender** | **String** | The gender of the healthcare professional  Filtering Type: &#x60;option&#x60;  &#x60;&#x60;&#x60; Eligible For:     * healthcareProfessional &#x60;&#x60;&#x60; | [optional] |
 | **geomodifier** | **String** | Provides additional information on where the entity can be found (e.g., &#x60;Times Square&#x60;, &#x60;Global Center Mall&#x60;)  Filtering Type: &#x60;text&#x60;  &#x60;&#x60;&#x60; Eligible For:     * atm    * financialProfessional    * healthcareFacility    * healthcareProfessional    * hotel    * location    * restaurant &#x60;&#x60;&#x60; | [optional] |
@@ -293,6 +309,21 @@ instance = Yext::InlineResponse200ResponseEntities.new(
   concierge: null,
   conditions_treated: null,
   convenience_store: null,
+  covid_messaging: null,
+  covid_test_appointment_url: null,
+  covid_testing_appointment_required: null,
+  covid_testing_drive_through_site: null,
+  covid_testing_is_free: null,
+  covid_testing_patient_restrictions: null,
+  covid_testing_referral_required: null,
+  covid_testing_site_instructions: null,
+  covid_vaccine_appointment_required: null,
+  covid_vaccine_drive_through_site: null,
+  covid_vaccine_information_url: null,
+  covid_vaccine_patient_restrictions: null,
+  covid_vaccine_referral_required: null,
+  covid_vaccine_site_instructions: null,
+  covid_vaccines_offered: null,
   currency_exchange: null,
   custom_keywords: null,
   date_posted: null,
@@ -328,6 +359,7 @@ instance = Yext::InlineResponse200ResponseEntities.new(
   free_weights: null,
   frequently_asked_questions: null,
   front_desk: null,
+  fully_vaccinated_staff: null,
   game_room: null,
   gender: null,
   geomodifier: null,

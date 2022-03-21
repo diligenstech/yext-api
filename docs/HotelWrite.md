@@ -5,9 +5,9 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **meta** | [**AtmWriteAllOfMeta**](AtmWriteAllOfMeta.md) |  | [optional] |
-| **name** | **String** |    Cannot Include: * HTML markup | [optional] |
+| **name** | **String** |   Cannot Include: * HTML markup | [optional] |
 | **address** | [**AtmWriteAllOfAddress**](AtmWriteAllOfAddress.md) |  | [optional] |
-| **access_hours** | [**AtmWriteAllOfAccessHours**](AtmWriteAllOfAccessHours.md) |  | [optional] |
+| **access_hours** | [**HotelWriteAllOfAccessHours**](HotelWriteAllOfAccessHours.md) |  | [optional] |
 | **additional_hours_text** | **String** | Additional information about hours that does not fit in **&#x60;hours&#x60;** (e.g., &#x60;\&quot;Closed during the winter\&quot;&#x60;) | [optional] |
 | **address_hidden** | **Boolean** | If &#x60;true&#x60;, the entity&#39;s street address will not be shown on listings. Defaults to &#x60;false&#x60;. | [optional] |
 | **adult_pool** | **String** | Indicates whether the entity has a pool for adults only. | [optional] |
@@ -18,7 +18,7 @@
 | **alternate_phone** | **String** | Must be a valid phone number.  If the phone number&#39;s calling code is for a country other than the one given in the entity&#39;s **&#x60;countryCode&#x60;**, the phone number provided must contain the calling code (e.g., &#x60;+44&#x60; in &#x60;+442038083831&#x60;). Otherwise, the calling code is optional. | [optional] |
 | **alternate_websites** | **Array&lt;String&gt;** | Other websites for your business that we should search for when tracking your search performance   Array must be ordered.  Array may have a maximum of 3 elements.  Array item description:  &gt;Cannot Include: &gt;* common domain names, e.g., google.com, youtube.com, etc. | [optional] |
 | **android_app_url** | **String** | The URL where consumers can download the entity&#39;s Android app | [optional] |
-| **associations** | **Array&lt;String&gt;** | Association memberships relevant to the entity (e.g., &#x60;\&quot;New York Doctors Association\&quot;&#x60;) All strings must be non-empty when trimmed of whitespace.    Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Cannot Include: &gt;* HTML markup | [optional] |
+| **associations** | **Array&lt;String&gt;** | Association memberships relevant to the entity (e.g., &#x60;\&quot;New York Doctors Association\&quot;&#x60;) All strings must be non-empty when trimmed of whitespace.   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Cannot Include: &gt;* HTML markup | [optional] |
 | **babysitting_offered** | **String** | Indicates whether the entity offers babysitting. | [optional] |
 | **baggage_storage** | **String** | Indicates whether the entity offers baggage storage pre check-in and post check-out. | [optional] |
 | **bar** | **String** | Indicates whether the entity has an indoor or outdoor bar onsite. | [optional] |
@@ -27,7 +27,7 @@
 | **bicycles** | **String** | Indicates whether the entity offers bicycles for rent or for free. | [optional] |
 | **bios** | [**HealthcareFacilityWriteAllOfBios**](HealthcareFacilityWriteAllOfBios.md) |  | [optional] |
 | **boutique_stores** | **String** | Indicates whether the entity has a boutique store. Gift shop or convenience store are not eligible. | [optional] |
-| **brands** | **Array&lt;String&gt;** | Brands sold by this entity All strings must be non-empty when trimmed of whitespace.    Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Cannot Include: &gt;* HTML markup | [optional] |
+| **brands** | **Array&lt;String&gt;** | Brands sold by this entity All strings must be non-empty when trimmed of whitespace.   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Cannot Include: &gt;* HTML markup | [optional] |
 | **breakfast** | **String** | Indicates whether the entity offers breakfast. | [optional] |
 | **brunch_hours** | [**HotelWriteAllOfBrunchHours**](HotelWriteAllOfBrunchHours.md) |  | [optional] |
 | **business_center** | **String** | Indicates whether the entity has a business center. | [optional] |
@@ -52,7 +52,7 @@
 | **electric_charging_station** | **String** | Indicates whether the entity has electric car chargine stations on premise. | [optional] |
 | **elevator** | **String** | Indicates whether the entity has an elevator. | [optional] |
 | **elliptical_machine** | **String** | Indicates whether the entity has an elliptical machine. | [optional] |
-| **emails** | **Array&lt;String&gt;** | Emails addresses for this entity&#39;s point of contact  Must be valid email addresses    Array must be ordered.  Array may have a maximum of 5 elements.  | [optional] |
+| **emails** | **Array&lt;String&gt;** | Emails addresses for this entity&#39;s point of contact  Must be valid email addresses   Array must be ordered.  Array may have a maximum of 5 elements.  | [optional] |
 | **facebook_call_to_action** | [**AtmWriteAllOfFacebookCallToAction**](AtmWriteAllOfFacebookCallToAction.md) |  | [optional] |
 | **facebook_cover_photo** | [**AtmWriteAllOfFacebookCoverPhoto**](AtmWriteAllOfFacebookCoverPhoto.md) |  | [optional] |
 | **facebook_descriptor** | **String** | Location Descriptors are used for Enterprise businesses that sync Facebook listings using brand page location structure. The Location Descriptor is typically an additional geographic description (e.g. geomodifier) that will appear in parentheses after the name on the Facebook listing.   Cannot Include: * HTML markup | [optional] |
@@ -69,6 +69,7 @@
 | **free_weights** | **String** | Indicates whether the entity has free weights. | [optional] |
 | **frequently_asked_questions** | [**Array&lt;AtmWriteAllOfFrequentlyAskedQuestions&gt;**](AtmWriteAllOfFrequentlyAskedQuestions.md) | A list of questions that are frequently asked about this entity   Array must be ordered.  Array may have a maximum of 100 elements.  | [optional] |
 | **front_desk** | **String** | Indicates whether the entity has a front desk. | [optional] |
+| **fully_vaccinated_staff** | **Boolean** | Indicates whether the staff is vaccinated against COVID-19. | [optional] |
 | **game_room** | **String** | Indicates whether the entity has a game room. | [optional] |
 | **geomodifier** | **String** | Provides additional information on where the entity can be found (e.g., &#x60;Times Square&#x60;, &#x60;Global Center Mall&#x60;) | [optional] |
 | **gift_shop** | **String** | Indicates whether the entity has a gift shop. | [optional] |
@@ -83,21 +84,21 @@
 | **holiday_hours_conversation_enabled** | **Boolean** | Indicates whether holiday-hour confirmation alerts are enabled for the Yext Knowledge Assistant for this entity | [optional] |
 | **horseback_riding** | **String** | Indicates whether the entity offers horseback riding. | [optional] |
 | **hot_tub** | **String** | Indicates whether the entity has a hot tub. | [optional] |
-| **hours** | [**AtmWriteAllOfHours**](AtmWriteAllOfHours.md) |  | [optional] |
+| **hours** | [**HotelWriteAllOfHours**](HotelWriteAllOfHours.md) |  | [optional] |
 | **housekeeping** | **String** | Indicates whether the entity offers housekeeping services. | [optional] |
 | **impressum** | **String** | A statement of the ownership and authorship of a document. Individuals or organizations based in many German-speaking countries are required by law to include an Impressum in published media. | [optional] |
 | **indoor_pool_count** | **Float** | A count of the number of indoor pools | [optional] |
 | **instagram_handle** | **String** | Valid Instagram username for the entity without the leading \&quot;@\&quot; (e.g., &#x60;NewCityAuto&#x60;) | [optional] |
 | **ios_app_url** | **String** | The URL where consumers can download the entity&#39;s app to their iPhone or iPad | [optional] |
 | **iso_region_code** | **String** | The ISO 3166-2 region code for the entity  Yext will determine the entity&#39;s code and update **&#x60;isoRegionCode&#x60;** with that value. If Yext is unable to determine the code for the entity, the entity&#39;ss ISO 3166-1 alpha-2 country code will be used. | [optional] |
-| **keywords** | **Array&lt;String&gt;** | Keywords that describe the entity.  All strings must be non-empty when trimmed of whitespace.    Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Cannot Include: &gt;* HTML markup | [optional] |
+| **keywords** | **Array&lt;String&gt;** | Keywords that describe the entity.  All strings must be non-empty when trimmed of whitespace.   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Cannot Include: &gt;* HTML markup | [optional] |
 | **kid_friendly** | **String** | Indicates if the entity is kid friendly. | [optional] |
 | **kids_club** | **String** | Indicates if the property has a Kids Club. | [optional] |
 | **kids_stay_free** | **String** | Indicates whether the entity allows kids to stay free. | [optional] |
 | **kitchen_hours** | [**HotelWriteAllOfKitchenHours**](HotelWriteAllOfKitchenHours.md) |  | [optional] |
 | **labels** | **Array&lt;String&gt;** | The IDs of the entity labels that have been added to this entity. Entity labels help you identify entities that share a certain characteristic; they do not appear on your entity&#39;s listings.  **NOTE:** You can only add labels that have already been created via our web interface. Currently, it is not possible to create new labels via the API. | [optional] |
 | **landing_page_url** | **String** | The URL of this entity&#39;s Landing Page that was created with Yext Pages | [optional] |
-| **languages** | **Array&lt;String&gt;** | The langauges in which consumers can commicate with this entity or its staff members All strings must be non-empty when trimmed of whitespace.    Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Cannot Include: &gt;* HTML markup | [optional] |
+| **languages** | **Array&lt;String&gt;** | The langauges in which consumers can commicate with this entity or its staff members All strings must be non-empty when trimmed of whitespace.   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Cannot Include: &gt;* HTML markup | [optional] |
 | **laundry** | **String** | Indicates whether the entity offers laundry services. | [optional] |
 | **lazy_river** | **String** | Indicates if the property has a lazy river | [optional] |
 | **lifeguard** | **String** | Indicates if the property has a lifeguard on duty | [optional] |
@@ -121,7 +122,7 @@
 | **parking** | **String** | Indicates whether the entity offers parking services. | [optional] |
 | **payment_options** | **Array&lt;String&gt;** | The payment methods accepted by this entity  Valid elements depend on the entity&#39;s country.  | [optional] |
 | **pets_allowed** | **String** | Indicates if the entity is pet friendly. | [optional] |
-| **photo_gallery** | [**Array&lt;EventWriteAllOfPhotoGallery&gt;**](EventWriteAllOfPhotoGallery.md) |  **NOTE:** The list of photos that you send us must be comprehensive. For example, if you send us a list of photos that does not include photos that you sent in your last update, Yext considers the missing photos to be deleted, and we remove them from your listings.    Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Supported Aspect Ratios: &gt;* 1 x 1 &gt;* 4 x 3 &gt;* 3 x 2 &gt;* 5 x 3 &gt;* 16 x 9 &gt;* 3 x 1 &gt;* 2 x 3 &gt;* 5 x 7 &gt;* 4 x 5 &gt;* 4 x 1 &gt; &gt;**NOTE**: Maximum image size is 5mb after normalization and padding (if applicable). As well, there is a 6 second download limit from the image host. &gt; | [optional] |
+| **photo_gallery** | [**Array&lt;EventWriteAllOfPhotoGallery&gt;**](EventWriteAllOfPhotoGallery.md) |  **NOTE:** The list of photos that you send us must be comprehensive. For example, if you send us a list of photos that does not include photos that you sent in your last update, Yext considers the missing photos to be deleted, and we remove them from your listings.   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Supported Aspect Ratios: &gt;* 1 x 1 &gt;* 4 x 3 &gt;* 3 x 2 &gt;* 5 x 3 &gt;* 16 x 9 &gt;* 3 x 1 &gt;* 2 x 3 &gt;* 5 x 7 &gt;* 4 x 5 &gt;* 4 x 1 &gt; &gt;**NOTE**: Maximum image size is 5mb after normalization and padding (if applicable). As well, there is a 6 second download limit from the image host. &gt; | [optional] |
 | **pickup_coordinate** | [**AtmWriteAllOfPickupCoordinate**](AtmWriteAllOfPickupCoordinate.md) |  | [optional] |
 | **primary_conversation_contact** | **String** | ID of the user who is the primary Knowledge Assistant contact for the entity | [optional] |
 | **private_beach** | **String** | Indicates whether the entity has access to a private beach. | [optional] |
@@ -144,9 +145,9 @@
 | **sauna** | **String** | Indicates whether the entity has a sauna. | [optional] |
 | **scuba** | **String** | Indicates whether the entity offers scuba diving. | [optional] |
 | **self_parking** | **String** | Indicates whether the entity offers self parking services. | [optional] |
-| **service_area** | [**HealthcareFacilityWriteAllOfServiceArea**](HealthcareFacilityWriteAllOfServiceArea.md) |  | [optional] |
+| **service_area** | [**HotelWriteAllOfServiceArea**](HotelWriteAllOfServiceArea.md) |  | [optional] |
 | **service_area_places** | [**Array&lt;HealthcareFacilityWriteAllOfServiceAreaPlaces&gt;**](HealthcareFacilityWriteAllOfServiceAreaPlaces.md) | Information about the area that is served by this entity. It is specified as a list of service area names and their associated types. **Only for Google My Business and Bing:** Currently, **serviceArea** is only supported by Google My Business and Bing and will not affect your listings on other sites.   Array may have a maximum of 200 elements.  | [optional] |
-| **services** | **Array&lt;String&gt;** | Services offered by this entity  All strings must be non-empty when trimmed of whitespace.    Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Cannot Include: &gt;* HTML markup | [optional] |
+| **services** | **Array&lt;String&gt;** | Services offered by this entity  All strings must be non-empty when trimmed of whitespace.   Array must be ordered.  Array may have a maximum of 100 elements.  Array item description:  &gt;Cannot Include: &gt;* HTML markup | [optional] |
 | **smoke_free_property** | **String** | Indicates if the entity is smoke free. | [optional] |
 | **snorkeling** | **String** | Indicates whether the entity offers snorkeling. | [optional] |
 | **social_hour** | **String** | Indicates whether the entity offers a social hour. | [optional] |
@@ -164,7 +165,7 @@
 | **uber_trip_branding** | [**HealthcareFacilityWriteAllOfUberTripBranding**](HealthcareFacilityWriteAllOfUberTripBranding.md) |  | [optional] |
 | **valet_parking** | **String** | Indicates whether the entity offers valet parking services. | [optional] |
 | **vending_machine** | **String** | Indicates whether the entity has a vending machine. | [optional] |
-| **videos** | [**Array&lt;HealthcareFacilityWriteAllOfVideos&gt;**](HealthcareFacilityWriteAllOfVideos.md) | Valid YouTube URLs for embedding a video on some publisher sites  **NOTE:** Currently, only the first URL in the Array appears in your listings.    Array must be ordered.  | [optional] |
+| **videos** | [**Array&lt;HealthcareFacilityWriteAllOfVideos&gt;**](HealthcareFacilityWriteAllOfVideos.md) | Valid YouTube URLs for embedding a video on some publisher sites  **NOTE:** Currently, only the first URL in the Array appears in your listings.   Array must be ordered.  | [optional] |
 | **wading_pool** | **String** | Indicates whether the entity has a wading pool. | [optional] |
 | **wake_up_calls** | **String** | Indicates whether the entity offers wake up call services. | [optional] |
 | **walkable_coordinate** | [**AtmWriteAllOfWalkableCoordinate**](AtmWriteAllOfWalkableCoordinate.md) |  | [optional] |
@@ -251,6 +252,7 @@ instance = Yext::HotelWrite.new(
   free_weights: null,
   frequently_asked_questions: null,
   front_desk: null,
+  fully_vaccinated_staff: null,
   game_room: null,
   geomodifier: null,
   gift_shop: null,
