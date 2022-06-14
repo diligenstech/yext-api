@@ -778,7 +778,7 @@ end
 
 Listing Admin: Invite
 
-Sends invitations to new listing admins for entities in an account. For Google My Business listings, the admins will be given owner-level access. 
+Sends invitations to new listing admins for entities in an account. For Google Business Profile listings, the admins will be given owner-level access. 
 
 ### Examples
 

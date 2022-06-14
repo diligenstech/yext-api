@@ -11,10 +11,10 @@
 | **status** | **String** |  | [optional] |
 | **additional_status** | **String** |  | [optional] |
 | **listing_url** | **String** | Listing URL | [optional] |
-| **login_url** | **String** | URL where the user can log in to the publisher to manage this listing at that publisher (only returned for Google My Business) | [optional] |
+| **login_url** | **String** | URL where the user can log in to the publisher to manage this listing at that publisher (only returned for Google Business Profile) | [optional] |
 | **screenshot_url** | **String** | URL of a screenshot of the profile page that includes the Featured Message | [optional] |
 | **status_details** | [**Array&lt;ListingStatusDetail&gt;**](ListingStatusDetail.md) | List of warnings, or reasons why the listing is unavailable | [optional] |
-| **alternate_brands** | [**Array&lt;ListingAlternateBrands&gt;**](ListingAlternateBrands.md) | *(only present if the **v** parameter is &#x60;20170420&#x60; or later)*   List of Publisher&#39;s alternate brands where the listing is syndicated  | [optional] |
+| **alternate_brands** | [**Array&lt;ListingAlternateBrandsInner&gt;**](ListingAlternateBrandsInner.md) | *(only present if the **v** parameter is &#x60;20170420&#x60; or later)*  List of Publisher&#39;s alternate brands where the listing is syndicated  | [optional] |
 
 ## Example
 

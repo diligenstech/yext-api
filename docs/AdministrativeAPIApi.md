@@ -455,7 +455,7 @@ end
 api_instance = Yext::AdministrativeAPIApi.new
 account_id = 'account_id_example' # String | 
 v = 'v_example' # String | A date in `YYYYMMDD` format.
-new_location_add_request = Yext::NewLocationAddRequest.new({new_location_id: 'new_location_id_example', new_location_data: Yext::Location.new, new_entity_data: 3.56, skus: ["SKU-00000167", "SKU-00000168"]}) # NewLocationAddRequest | 
+new_location_add_request = Yext::NewLocationAddRequest.new({new_location_id: 'new_location_id_example', new_location_data: Yext::NewLocationAddRequestNewLocationData.new, new_entity_data: 3.56, skus: ["SKU-00000167", "SKU-00000168"]}) # NewLocationAddRequest | 
 
 begin
   # Add Requests: Create (New Location)

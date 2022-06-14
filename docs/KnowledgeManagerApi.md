@@ -56,6 +56,7 @@ All URIs are relative to *https://api.yext.com/v2*
 | [**update_product**](KnowledgeManagerApi.md#update_product) | **PUT** /accounts/{accountId}/products/{listId} | Products: Update |
 | [**upsert_language_profile**](KnowledgeManagerApi.md#upsert_language_profile) | **PUT** /accounts/{accountId}/entityprofiles/{entityId}/{languageCode} | Entity Language Profiles: Upsert |
 | [**upsert_location_language_profile**](KnowledgeManagerApi.md#upsert_location_language_profile) | **PUT** /accounts/{accountId}/locations/{locationId}/profiles/{language_code} | Language Profiles (Legacy): Upsert |
+| [**upsert_suggestion**](KnowledgeManagerApi.md#upsert_suggestion) | **POST** /accounts/{accountId}/suggestions | Suggestion: Upsert |
 
 
 ## create_asset
@@ -302,7 +303,7 @@ end
 
 ## create_entity
 
-> <InlineResponse201> create_entity(account_id, entity_type, v, entity_write, opts)
+> <CreateEntity201Response> create_entity(account_id, entity_type, v, entity_write, opts)
 
 Entities: Create
 
@@ -351,7 +352,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<InlineResponse201>, Integer, Hash)> create_entity_with_http_info(account_id, entity_type, v, entity_write, opts)
+> <Array(<CreateEntity201Response>, Integer, Hash)> create_entity_with_http_info(account_id, entity_type, v, entity_write, opts)
 
 ```ruby
 begin
@@ -359,7 +360,7 @@ begin
   data, status_code, headers = api_instance.create_entity_with_http_info(account_id, entity_type, v, entity_write, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <InlineResponse201>
+  p data # => <CreateEntity201Response>
 rescue Yext::ApiError => e
   puts "Error when calling KnowledgeManagerApi->create_entity_with_http_info: #{e}"
 end
@@ -380,7 +381,7 @@ end
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateEntity201Response**](CreateEntity201Response.md)
 
 ### Authorization
 
@@ -952,7 +953,7 @@ end
 
 ## delete_entity
 
-> <InlineResponse2001> delete_entity(account_id, entity_id, v)
+> <DeleteEntity200Response> delete_entity(account_id, entity_id, v)
 
 Entities: Delete
 
@@ -994,7 +995,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<InlineResponse2001>, Integer, Hash)> delete_entity_with_http_info(account_id, entity_id, v)
+> <Array(<DeleteEntity200Response>, Integer, Hash)> delete_entity_with_http_info(account_id, entity_id, v)
 
 ```ruby
 begin
@@ -1002,7 +1003,7 @@ begin
   data, status_code, headers = api_instance.delete_entity_with_http_info(account_id, entity_id, v)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <InlineResponse2001>
+  p data # => <DeleteEntity200Response>
 rescue Yext::ApiError => e
   puts "Error when calling KnowledgeManagerApi->delete_entity_with_http_info: #{e}"
 end
@@ -1018,7 +1019,7 @@ end
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**DeleteEntity200Response**](DeleteEntity200Response.md)
 
 ### Authorization
 
@@ -1112,7 +1113,7 @@ end
 
 ## delete_language_profile
 
-> <InlineResponse2004> delete_language_profile(account_id, entity_id, language_code, v)
+> <DeleteLanguageProfile200Response> delete_language_profile(account_id, entity_id, language_code, v)
 
 Entity Language Profiles: Delete
 
@@ -1155,7 +1156,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<InlineResponse2004>, Integer, Hash)> delete_language_profile_with_http_info(account_id, entity_id, language_code, v)
+> <Array(<DeleteLanguageProfile200Response>, Integer, Hash)> delete_language_profile_with_http_info(account_id, entity_id, language_code, v)
 
 ```ruby
 begin
@@ -1163,7 +1164,7 @@ begin
   data, status_code, headers = api_instance.delete_language_profile_with_http_info(account_id, entity_id, language_code, v)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <InlineResponse2004>
+  p data # => <DeleteLanguageProfile200Response>
 rescue Yext::ApiError => e
   puts "Error when calling KnowledgeManagerApi->delete_language_profile_with_http_info: #{e}"
 end
@@ -1180,7 +1181,7 @@ end
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**DeleteLanguageProfile200Response**](DeleteLanguageProfile200Response.md)
 
 ### Authorization
 
@@ -1932,7 +1933,7 @@ end
 
 ## get_entity
 
-> <InlineResponse201> get_entity(account_id, entity_id, v, opts)
+> <CreateEntity201Response> get_entity(account_id, entity_id, v, opts)
 
 Entities: Get
 
@@ -1979,7 +1980,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<InlineResponse201>, Integer, Hash)> get_entity_with_http_info(account_id, entity_id, v, opts)
+> <Array(<CreateEntity201Response>, Integer, Hash)> get_entity_with_http_info(account_id, entity_id, v, opts)
 
 ```ruby
 begin
@@ -1987,7 +1988,7 @@ begin
   data, status_code, headers = api_instance.get_entity_with_http_info(account_id, entity_id, v, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <InlineResponse201>
+  p data # => <CreateEntity201Response>
 rescue Yext::ApiError => e
   puts "Error when calling KnowledgeManagerApi->get_entity_with_http_info: #{e}"
 end
@@ -2006,7 +2007,7 @@ end
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateEntity201Response**](CreateEntity201Response.md)
 
 ### Authorization
 
@@ -2268,7 +2269,7 @@ end
 
 ## get_language_profile
 
-> <InlineResponse201> get_language_profile(account_id, entity_id, language_code, v, opts)
+> <CreateEntity201Response> get_language_profile(account_id, entity_id, language_code, v, opts)
 
 Entity Language Profiles: Get
 
@@ -2316,7 +2317,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<InlineResponse201>, Integer, Hash)> get_language_profile_with_http_info(account_id, entity_id, language_code, v, opts)
+> <Array(<CreateEntity201Response>, Integer, Hash)> get_language_profile_with_http_info(account_id, entity_id, language_code, v, opts)
 
 ```ruby
 begin
@@ -2324,7 +2325,7 @@ begin
   data, status_code, headers = api_instance.get_language_profile_with_http_info(account_id, entity_id, language_code, v, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <InlineResponse201>
+  p data # => <CreateEntity201Response>
 rescue Yext::ApiError => e
   puts "Error when calling KnowledgeManagerApi->get_language_profile_with_http_info: #{e}"
 end
@@ -2344,7 +2345,7 @@ end
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateEntity201Response**](CreateEntity201Response.md)
 
 ### Authorization
 
@@ -3112,7 +3113,7 @@ end
 
 ## list_all_language_profiles
 
-> <InlineResponse2003> list_all_language_profiles(account_id, v, opts)
+> <ListAllLanguageProfiles200Response> list_all_language_profiles(account_id, v, opts)
 
 Entity Language Profiles: List All
 
@@ -3165,7 +3166,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<InlineResponse2003>, Integer, Hash)> list_all_language_profiles_with_http_info(account_id, v, opts)
+> <Array(<ListAllLanguageProfiles200Response>, Integer, Hash)> list_all_language_profiles_with_http_info(account_id, v, opts)
 
 ```ruby
 begin
@@ -3173,7 +3174,7 @@ begin
   data, status_code, headers = api_instance.list_all_language_profiles_with_http_info(account_id, v, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <InlineResponse2003>
+  p data # => <ListAllLanguageProfiles200Response>
 rescue Yext::ApiError => e
   puts "Error when calling KnowledgeManagerApi->list_all_language_profiles_with_http_info: #{e}"
 end
@@ -3198,7 +3199,7 @@ end
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**ListAllLanguageProfiles200Response**](ListAllLanguageProfiles200Response.md)
 
 ### Authorization
 
@@ -3300,7 +3301,7 @@ end
 
 ## list_entities
 
-> <InlineResponse200> list_entities(account_id, v, opts)
+> <ListEntities200Response> list_entities(account_id, v, opts)
 
 Entities: List
 
@@ -3353,7 +3354,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<InlineResponse200>, Integer, Hash)> list_entities_with_http_info(account_id, v, opts)
+> <Array(<ListEntities200Response>, Integer, Hash)> list_entities_with_http_info(account_id, v, opts)
 
 ```ruby
 begin
@@ -3361,7 +3362,7 @@ begin
   data, status_code, headers = api_instance.list_entities_with_http_info(account_id, v, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <InlineResponse200>
+  p data # => <ListEntities200Response>
 rescue Yext::ApiError => e
   puts "Error when calling KnowledgeManagerApi->list_entities_with_http_info: #{e}"
 end
@@ -3386,7 +3387,7 @@ end
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**ListEntities200Response**](ListEntities200Response.md)
 
 ### Authorization
 
@@ -3400,7 +3401,7 @@ end
 
 ## list_language_profiles
 
-> <InlineResponse2002> list_language_profiles(account_id, entity_id, v, opts)
+> <ListLanguageProfiles200Response> list_language_profiles(account_id, entity_id, v, opts)
 
 Entity Language Profiles: List
 
@@ -3449,7 +3450,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<InlineResponse2002>, Integer, Hash)> list_language_profiles_with_http_info(account_id, entity_id, v, opts)
+> <Array(<ListLanguageProfiles200Response>, Integer, Hash)> list_language_profiles_with_http_info(account_id, entity_id, v, opts)
 
 ```ruby
 begin
@@ -3457,7 +3458,7 @@ begin
   data, status_code, headers = api_instance.list_language_profiles_with_http_info(account_id, entity_id, v, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <InlineResponse2002>
+  p data # => <ListLanguageProfiles200Response>
 rescue Yext::ApiError => e
   puts "Error when calling KnowledgeManagerApi->list_language_profiles_with_http_info: #{e}"
 end
@@ -3478,7 +3479,7 @@ end
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**ListLanguageProfiles200Response**](ListLanguageProfiles200Response.md)
 
 ### Authorization
 
@@ -3826,7 +3827,7 @@ end
 
 ## update_entity
 
-> <InlineResponse201> update_entity(account_id, entity_id, v, entity_write, opts)
+> <CreateEntity201Response> update_entity(account_id, entity_id, v, entity_write, opts)
 
 Entities: Update
 
@@ -3875,7 +3876,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<InlineResponse201>, Integer, Hash)> update_entity_with_http_info(account_id, entity_id, v, entity_write, opts)
+> <Array(<CreateEntity201Response>, Integer, Hash)> update_entity_with_http_info(account_id, entity_id, v, entity_write, opts)
 
 ```ruby
 begin
@@ -3883,7 +3884,7 @@ begin
   data, status_code, headers = api_instance.update_entity_with_http_info(account_id, entity_id, v, entity_write, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <InlineResponse201>
+  p data # => <CreateEntity201Response>
 rescue Yext::ApiError => e
   puts "Error when calling KnowledgeManagerApi->update_entity_with_http_info: #{e}"
 end
@@ -3904,7 +3905,7 @@ end
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateEntity201Response**](CreateEntity201Response.md)
 
 ### Authorization
 
@@ -4246,7 +4247,7 @@ end
 
 ## upsert_language_profile
 
-> <InlineResponse201> upsert_language_profile(account_id, entity_id, language_code, v, entity_write)
+> <CreateEntity201Response> upsert_language_profile(account_id, entity_id, language_code, v, entity_write)
 
 Entity Language Profiles: Upsert
 
@@ -4290,7 +4291,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<InlineResponse201>, Integer, Hash)> upsert_language_profile_with_http_info(account_id, entity_id, language_code, v, entity_write)
+> <Array(<CreateEntity201Response>, Integer, Hash)> upsert_language_profile_with_http_info(account_id, entity_id, language_code, v, entity_write)
 
 ```ruby
 begin
@@ -4298,7 +4299,7 @@ begin
   data, status_code, headers = api_instance.upsert_language_profile_with_http_info(account_id, entity_id, language_code, v, entity_write)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <InlineResponse201>
+  p data # => <CreateEntity201Response>
 rescue Yext::ApiError => e
   puts "Error when calling KnowledgeManagerApi->upsert_language_profile_with_http_info: #{e}"
 end
@@ -4316,7 +4317,7 @@ end
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateEntity201Response**](CreateEntity201Response.md)
 
 ### Authorization
 
@@ -4405,6 +4406,90 @@ end
 ### Return type
 
 [**EmptyResponse**](EmptyResponse.md)
+
+### Authorization
+
+[api-key](../README.md#api-key), [api_key](../README.md#api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## upsert_suggestion
+
+> <IdResponse> upsert_suggestion(account_id, v, suggestion, opts)
+
+Suggestion: Upsert
+
+Create a suggestion via API.  **NOTE:**   * If a suggestion already exists from your app on the specified field, the suggestion will be updated.   * Suggestions on categories and keywords fields, as well ECLs are not currently supported. 
+
+### Examples
+
+```ruby
+require 'time'
+require 'yext'
+# setup authorization
+Yext.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['api-key'] = 'Bearer'
+
+  # Configure API key authorization: api_key
+  config.api_key['api_key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['api_key'] = 'Bearer'
+end
+
+api_instance = Yext::KnowledgeManagerApi.new
+account_id = 'account_id_example' # String | 
+v = 'v_example' # String | A date in `YYYYMMDD` format.
+suggestion = Yext::Suggestion.new({entity_field_suggestion: Yext::EntityFieldSuggestion.new({entity: Yext::Entity2.new, suggested_content: Yext::AtmWrite.new})}) # Suggestion | The suggestion to be upserted
+opts = {
+  format: 'format_example' # String | The formatting language used to parse rich text field values. Present and **required** if an only if the request contains a field with type \"**Rich Text**.\"  Valid values:   * `markdown`   * `html` 
+}
+
+begin
+  # Suggestion: Upsert
+  result = api_instance.upsert_suggestion(account_id, v, suggestion, opts)
+  p result
+rescue Yext::ApiError => e
+  puts "Error when calling KnowledgeManagerApi->upsert_suggestion: #{e}"
+end
+```
+
+#### Using the upsert_suggestion_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<IdResponse>, Integer, Hash)> upsert_suggestion_with_http_info(account_id, v, suggestion, opts)
+
+```ruby
+begin
+  # Suggestion: Upsert
+  data, status_code, headers = api_instance.upsert_suggestion_with_http_info(account_id, v, suggestion, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <IdResponse>
+rescue Yext::ApiError => e
+  puts "Error when calling KnowledgeManagerApi->upsert_suggestion_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **account_id** | **String** |  |  |
+| **v** | **String** | A date in &#x60;YYYYMMDD&#x60; format. |  |
+| **suggestion** | [**Suggestion**](Suggestion.md) | The suggestion to be upserted |  |
+| **format** | **String** | The formatting language used to parse rich text field values. Present and **required** if an only if the request contains a field with type \&quot;**Rich Text**.\&quot;  Valid values:   * &#x60;markdown&#x60;   * &#x60;html&#x60;  | [optional][default to &#39;markdown&#39;] |
+
+### Return type
+
+[**IdResponse**](IdResponse.md)
 
 ### Authorization
 

@@ -11,7 +11,7 @@
 | **alternate_text** | **String** | The alternate text to be used for accessibility purposes. | [optional] |
 | **width** | **Integer** | Original photo width. | [optional][readonly] |
 | **height** | **Integer** | Original photo height. | [optional][readonly] |
-| **derivatives** | [**Array&lt;PhotoDerivatives&gt;**](PhotoDerivatives.md) |  | [optional][readonly] |
+| **derivatives** | [**Array&lt;PhotoDerivativesInner&gt;**](PhotoDerivativesInner.md) |  | [optional][readonly] |
 
 ## Example
 

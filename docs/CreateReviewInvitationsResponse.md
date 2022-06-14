@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **meta** | [**ResponseMeta**](ResponseMeta.md) |  | [optional] |
-| **response** | [**Array&lt;ReviewInvitationOptional&gt;**](ReviewInvitationOptional.md) |  | [optional] |
+| **response** | [**Array&lt;CreateReviewInvitationsResponseResponseInner&gt;**](CreateReviewInvitationsResponseResponseInner.md) |  | [optional] |
 
 ## Example
 

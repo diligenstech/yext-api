@@ -11,8 +11,8 @@
 | **new_location_account_id** | **String** | *(Partner Portal mode)* The account ID to create a new location under.  This field is provided only for Partner Portal and when *locationMode* is NEW.  | [optional] |
 | **new_location_account_name** | **String** | *(Partner Portal mode)* The account name to create a new location under.  This field is provided only for Partner Portal and when *locationMode* is NEW and when *newLocationAccountName* was specified in the add request.  | [optional] |
 | **new_account_parent_account_id** | **String** | *(Partner Portal mode)* The account ID to create a new account and location under.  This field is provided only for Partner Portal, when *locationMode* is NEW and *newAccountParentAccountId* was specified in the add request.  | [optional] |
-| **new_location_data** | [**Location**](Location.md) | The location profile data used in creating a new location for this add request.  Optional. Provided only for the **Add Requests: Create (New Location)** endpoint.  | [optional] |
-| **new_entity_data** | [**Entity**](Entity.md) | The entity profile data used in creating a new entity for this add request.  Optional. Provided only for the **Add Requests: Create (New Location)** endpoint.  | [optional] |
+| **new_location_data** | [**AddRequestNewLocationData**](AddRequestNewLocationData.md) |  | [optional] |
+| **new_entity_data** | [**AddRequestNewEntityData**](AddRequestNewEntityData.md) |  | [optional] |
 | **skus** | **Array&lt;String&gt;** | List of SKUs to sign the location up for, from among those listed in the **Available Services: List** response with Location recipientType.  | [optional] |
 | **agreement_id** | **Integer** | The Agreement ID of the agreement that services will be added under.  | [optional] |
 | **status** | **String** | The current status of the add request. | [optional][readonly] |

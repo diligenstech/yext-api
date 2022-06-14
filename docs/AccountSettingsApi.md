@@ -1271,7 +1271,7 @@ api_instance = Yext::AccountSettingsApi.new
 account_id = 'account_id_example' # String | 
 v = 'v_example' # String | A date in `YYYYMMDD` format.
 user_id = 'user_id_example' # String | 
-update_user_request = Yext::UpdateUserRequest.new({id: 'id_example', first_name: 'first_name_example', last_name: 'last_name_example', email_address: 'email_address_example', username: 'username_example'}) # UpdateUserRequest | 
+update_user_request = Yext::UpdateUserRequest.new({id: 'id_example', first_name: 'first_name_example', last_name: 'last_name_example', username: 'username_example', email_address: 'email_address_example'}) # UpdateUserRequest | 
 
 begin
   # Users: Update

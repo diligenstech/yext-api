@@ -99,7 +99,7 @@ end
 
 Reports
 
-Create a report to retrieve analytics for each of your products using synchronous or asynchronous requests depending on the size of your data.
+Create a report to retrieve analytics for each of your products using synchronous or asynchronous requests depending on the size of your data.  For more information available in the Reports API, check our documentation below: * [Metrics in Analytics](https://help.yext.com/hc/en-us/articles/360000001103-Metrics-in-Analytics) * [Dimensions in Analytics](https://help.yext.com/hc/en-us/articles/5901921968027-Dimensions-in-Analytics) 
 
 ### Examples
 
